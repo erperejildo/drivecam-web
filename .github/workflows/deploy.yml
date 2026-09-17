@@ -1,0 +1,153 @@
+name: Deploy to GitHub Pages
+
+# IMPORTANT: this repository must set Settings -> Pages -> Source = "GitHub Actions".
+# Otherwise GitHub's built-in "pages-build-deployment" workflow races this one and
+# can publish a broken site.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Cancel competing Pages builds
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run list --workflow pages-build-deployment --limit 20 --json databaseId,status \
+            --jq '.[] | select(.status == "in_progress" or .status == "queued") | .databaseId' \
+            | xargs -r -I{} gh run cancel {} || true
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build (prerendered static site)
+        run: npm run build
+
+      - name: Validate build artifacts
+        run: |
+          set -e
+          test -f dist/index.html
+          test -f dist/404.html
+          test -f dist/.nojekyll
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+          test -f dist/en/index.html
+          test -f dist/es/index.html
+          test -f dist/en/pricing/index.html
+          test -f dist/es/pricing/index.html
+          test -f dist/en/guide/index.html
+          test -f dist/es/guide/index.html
+          test -f dist/en/legal/index.html
+          test -f dist/es/legal/index.html
+          grep -q '<title>' dist/index.html
+          grep -q 'hreflang="es"' dist/en/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Package site
+        run: tar --dereference --hard-dereference -C dist -cf artifact.tar .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: artifact.tar
+          retention-days: 1
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Cancel lingering Pages builds
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run list --workflow pages-build-deployment --limit 20 --json databaseId,status \
+            --jq '.[] | select(.status == "in_progress" or .status == "queued") | .databaseId' \
+            | xargs -r -I{} gh run cancel {} || true
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Retry deploy if needed
+        if: steps.deployment.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 20
+          gh run list --workflow pages-build-deployment --limit 20 --json databaseId,status \
+            --jq '.[] | select(.status == "in_progress" or .status == "queued") | .databaseId' \
+            | xargs -r -I{} gh run cancel {} || true
+          sleep 20
+
+      - name: Deploy to GitHub Pages (retry 1)
+        if: steps.deployment.outcome == 'failure'
+        id: deployment_retry_1
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Deploy to GitHub Pages (retry 2)
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure'
+        id: deployment_retry_2
+        uses: actions/deploy-pages@v5
+
+      - name: Smoke test
+        run: |
+          set -e
+          sleep 15
+          base="https://erperejildo.github.io/drivecam-web"
+          for path in "" "en/" "es/" "en/pricing/" "es/guide/" "sitemap.xml"; do
+            code=$(curl -sL -o /dev/null -w "%{http_code}" "$base/$path")
+            echo "$base/$path -> $code"
+            if [ "$code" != "200" ]; then
+              echo "Smoke test failed for $base/$path"
+              exit 1
+            fi
+          done

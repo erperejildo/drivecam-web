@@ -1,0 +1,9 @@
+dist
+dist-ssr
+node_modules
+coverage
+package-lock.json
+public
+*.png
+*.ico
+*.ttf

@@ -1,0 +1,16 @@
+$bp-sm: 36rem;
+$bp-md: 48rem;
+$bp-lg: 64rem;
+$bp-xl: 80rem;
+
+@mixin until($bp) {
+  @media (max-width: ($bp - 0.0625rem)) {
+    @content;
+  }
+}
+
+@mixin from($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
