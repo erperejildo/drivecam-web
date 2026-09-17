@@ -121,7 +121,7 @@ Plans: **Free** · **PRO Monthly** (popular) · **PRO Lifetime**. Placeholder pr
 5. **Phase 4** — Pricing, Guide, Legal, FAQ, Contact (mailto) ✅
 6. **Phase 5** — prerender + sitemap/robots/hreflang/JSON-LD ✅
 7. **Phase 6** — copy/design polish + responsive QA ✅ (asset placeholders still marked)
-8. **Phase 7** — final checks + push + deploy ⏳ (deploy runs on push to `main`)
+8. **Phase 7** — final checks + push + deploy ✅ — live at <https://erperejildo.github.io/drivecam-web/> (deploys on every push to `main`)
 
 ### Verification commands
 
