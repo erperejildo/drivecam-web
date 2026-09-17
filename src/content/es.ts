@@ -5,7 +5,7 @@ export const es: SiteContent = {
   localeName: 'Español',
   meta: {
     home: {
-      title: 'Dashcam para Coche con GPS | DriveCam',
+      title: 'DriveCam',
       description:
         'DriveCam convierte tu móvil en una dashcam para coche. Grabación en bucle con GPS, almacenamiento privado, control por voz e informes de incidente. Gratis en iPhone y Android.',
     },
@@ -401,26 +401,22 @@ export const es: SiteContent = {
     eyebrow: 'Guía de configuración',
     title: 'Cómo convertir tu móvil en dashcam',
     description:
-      'Todo lo necesario para montar una dashcam con el móvil que aguante carreteras de verdad: soporte, ajustes, batería, calor y la normativa local que debes consultar antes de grabar.',
+      'Una puesta en marcha corta y práctica: colócalo bien, configúralo una vez y consulta la normativa antes de grabar.',
     intro: [
-      'Una dashcam con el móvil no es solo "una cámara apuntando a la carretera". Para servir cuando importa, tiene que grabar en bucle, sobrevivir al calor del verano, gestionar la pantalla de forma inteligente y sellar el vídeo con los datos que necesitarás después: cuándo, dónde y a qué velocidad.',
-      'Esta guía repasa una configuración que funciona — y los errores que hacen que las dashcam de móvil fallen justo cuando alguien necesita el vídeo.',
+      'Un buen vídeo de dashcam no sale por casualidad. Con el soporte adecuado, cinco minutos de configuración y algo de gestión del calor, tu móvil graba pruebas fiables en cada trayecto.',
     ],
     sections: [
       {
         id: 'mount',
         number: '01',
-        title: 'Elige el móvil y colócalo bien',
+        title: 'Colócalo bien',
         paragraphs: [
-          'Sirve cualquier iPhone o Android razonablemente moderno — y el candidato perfecto suele ser el móvil que duerme en un cajón: un móvil dedicado puede quedarse en el coche, montado y cargando de forma permanente, mientras tu móvil de diario sigue en tu bolsillo.',
-          'La posición decide si tu grabación sirve o no vale nada. La cámara debe ver la carretera por delante y el máximo de la escena posible: ni cielo, ni salpicadero, ni el dorso del espejo.',
+          'Sirve cualquier iPhone o Android moderno — uno viejo en un cajón es ideal, porque puede quedarse montado y cargando en el coche. Ponlo en el centro-arriba del parabrisas o sobre el salpicadero, viendo la carretera y sin taparte la vista.',
         ],
         bullets: [
-          'Un móvil con una cámara trasera decente (1080p sobra para pruebas) y el GPS activado — es lo que hace útil el vídeo',
-          'En el centro-arriba del parabrisas, o sobre el salpicadero tras la línea de los limpias',
-          'Lejos de los airbags y de cualquier cosa que te tape la vista',
-          'Pasa el cable de carga de forma que nunca cruce los mandos',
-          'Limpia el cristal donde lo pegues: una mancha de grasa emborrona todo',
+          'Cámara con GPS activado — es lo que hace útil el vídeo',
+          'Lejos de los airbags y de tu campo de visión',
+          'Pasa el cable de carga lejos de los mandos',
         ],
       },
       {
@@ -431,11 +427,9 @@ export const es: SiteContent = {
           'Instala DriveCam, ábrela y concede los permisos que pide: cámara, micrófono, ubicación y notificaciones. Después repasa estos ajustes una vez — a partir de ahí, grabar es un solo toque.',
         ],
         bullets: [
-          'Duración del bucle: 1–2 minutos mantiene los clips manejables y el espacio predecible',
-          'Calidad de vídeo: la máxima que tu móvil aguante cómodamente día tras día',
-          'Límite de almacenamiento: fija 2–5 GB para que la limpieza ocurra sola',
-          'Activa despertar pantalla al cargar o grabación en segundo plano con la pantalla apagada',
-          'Activa el sellado GPS: la velocidad y las coordenadas son tu mejor prueba',
+          'Duración del bucle: 1–2 minutos mantiene clips y espacio manejables',
+          'Límite de almacenamiento: 2–5 GB limpia solo',
+          'Activa el sellado GPS: velocidad y coordenadas son tu mejor prueba',
         ],
       },
       {
@@ -443,13 +437,12 @@ export const es: SiteContent = {
         number: '03',
         title: 'Voz, estadísticas y redes de seguridad',
         paragraphs: [
-          'Cuando lo básico funcione, activa las funciones que hacen que la cámara parezca equipo serio — y las que te protegen cuando las condiciones se complican.',
+          'Cuando lo básico funcione, activa las funciones que hacen más fácil y seguro el día a día al volante.',
         ],
         bullets: [
-          'Control por voz: empieza y para la grabación, bloquea clips y haz fotos sin tocar el móvil',
-          'Velocidad en pantalla y avisos de límite para una conducción tranquila y consciente',
-          'Modo noche: refuerzo automático de brillo cuando cae la luz',
-          'Avisos de batería baja para que la grabación termine con elegancia, y no a mitad de clip',
+          'Control por voz: graba, bloquea clips y haz fotos sin manos',
+          'Velocidad en pantalla y avisos de límite',
+          'Modo noche y avisos de batería baja',
         ],
       },
       {
@@ -457,13 +450,12 @@ export const es: SiteContent = {
         number: '04',
         title: 'Vence al calor y al consumo de batería',
         paragraphs: [
-          'El calor es el asesino número uno de las dashcam con móvil. Un teléfono al sol en el parabrisas puede alcanzar su límite térmico en minutos — y por eso DriveCam vigila la temperatura y pausa la grabación antes de causar daños.',
+          'El calor es el asesino número uno de las dashcam con móvil. DriveCam vigila la temperatura y pausa la grabación antes de causar daños — ayúdala dejando el móvil fuera del sol directo y cargando mientras graba.',
         ],
         bullets: [
-          'Aparca a la sombra o gira el móvil lejos del sol cuando el coche esté apagado',
+          'Aparca a la sombra o aparta el móvil del sol',
           'Orienta una salida de aire hacia el móvil en días calurosos',
-          'Mantén el móvil cargando mientras graba: el GPS y la cámara consumen rápido',
-          'En invierno la batería baja antes; un umbral de batería baja lo hace predecible',
+          'Mantén la carga mientras graba: GPS y cámara consumen rápido',
         ],
       },
       {
@@ -474,10 +466,9 @@ export const es: SiteContent = {
           'Cuando ocurre algo, solo tienes dos tareas: conservar el clip y entregar los hechos. DriveCam está hecha para las dos.',
         ],
         bullets: [
-          'Bloquea el clip para que la limpieza automática no pueda tocarlo jamás',
-          'Genera el informe de incidente en PDF: fecha, hora, GPS, mapa, velocidad máxima y duración',
-          'Comparte el vídeo directamente con tu seguro o la policía desde la app',
-          'Guarda una copia en un sitio seguro antes de que el móvil cambie de manos',
+          'Bloquea el clip para que la limpieza no pueda tocarlo',
+          'Genera el informe PDF con GPS, mapa y velocidad máxima',
+          'Compártelo con tu seguro o la policía desde la app',
         ],
       },
     ],
@@ -485,8 +476,7 @@ export const es: SiteContent = {
     lawNote:
       'Las normas sobre dashcams cambian de un país a otro, y a veces incluso entre regiones. Antes de montar una cámara, consulta la normativa vigente que se aplica donde conduces. DriveCam es una ayuda, no asesoramiento legal.',
     ctaTitle: '¿Listo para probarla en tu propio parabrisas?',
-    ctaBody:
-      'DriveCam se descarga gratis para iPhone y Android. Toda esta guía describe la app — menos la configuración.',
+    ctaBody: 'DriveCam se descarga gratis para iPhone y Android.',
   },
   legal: {
     eyebrow: 'Legal',

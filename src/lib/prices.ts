@@ -180,17 +180,10 @@ export const LIFETIME_PRICES: Record<string, PriceValue> = {
   ZW: ['USD', 18.55],
 }
 
-// Fallback for countries not listed above (Apple's "new countries/regions" tier).
-export const REST_PRICE_BY_LOCALE: Record<SiteLocale, PriceValue> = {
-  en: ['USD', 18.55],
-  es: ['EUR', 15.99],
-}
-
-// Fallback when the visitor's country cannot be detected.
-export const DEFAULT_PRICE_BY_LOCALE: Record<SiteLocale, PriceValue> = {
-  en: LIFETIME_PRICES.US ?? ['USD', 24.99],
-  es: LIFETIME_PRICES.ES ?? ['EUR', 18.99],
-}
+// Fallback for countries not listed above (Apple's "new countries/regions" tier)
+// and when the visitor's country cannot be detected. Country-independent: the
+// same value is shown on every locale.
+export const FALLBACK_PRICE: PriceValue = ['USD', 18.55]
 
 const LOCALE_TAGS: Record<SiteLocale, string> = { en: 'en-US', es: 'es-ES' }
 

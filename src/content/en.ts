@@ -5,7 +5,7 @@ export const en: SiteContent = {
   localeName: 'English',
   meta: {
     home: {
-      title: 'Turn Your Phone Into a Dashcam | DriveCam',
+      title: 'DriveCam',
       description:
         'DriveCam turns your phone into a powerful dash cam. Loop recording with GPS, private storage, voice control and incident reports. Free on iPhone and Android.',
     },
@@ -403,26 +403,22 @@ export const en: SiteContent = {
     eyebrow: 'Setup guide',
     title: 'How to turn your phone into a dashcam',
     description:
-      'Everything you need to set up a phone dash cam that actually holds up on real roads — mounting, settings, battery, heat, and the local rules to check before you record.',
+      'A short, practical setup: mount it right, set it once, and know the local rules before you record.',
     intro: [
-      'A phone dash cam is not just "a camera pointed at the road". To be useful when it matters, it needs to record in loops, survive summer heat, keep the screen on (or off) intelligently, and stamp the footage with the facts you will need later: when, where and how fast.',
-      'This guide walks through a setup that works — and the mistakes that make phone dash cams fail right when someone needs the footage.',
+      'Good dashcam footage does not happen by accident. With the right mount, a five-minute setup and a little heat management, your phone can record reliable evidence on every drive.',
     ],
     sections: [
       {
         id: 'mount',
         number: '01',
-        title: 'Pick a phone and mount it right',
+        title: 'Mount it right',
         paragraphs: [
-          'Any reasonably modern iPhone or Android works as a dash cam — and the perfect candidate is often the phone sitting unused in a drawer: a dedicated dash cam phone can stay in the car, permanently mounted and permanently charged, while your daily phone keeps living in your pocket.',
-          'Position decides whether your footage is useful or worthless. The camera should see the road ahead and as much of the scene as possible — not the sky, not your dashboard, not the back of your mirror.',
+          'Any modern iPhone or Android works — an old phone in a drawer is ideal, since it can stay mounted and charged in the car. Place it top-center of the windshield or on the dashboard, seeing the road ahead and never blocking your view.',
         ],
         bullets: [
-          'A phone with a decent rear camera (1080p is plenty for evidence) and GPS enabled — it is what makes footage useful',
-          'Top-center of the windshield, or on the dashboard behind the wiper line',
-          'Keep it clear of airbags and anything that blocks your view of the road',
-          'Route the charging cable so it never crosses your controls',
-          'Clean the glass where you mount it; a greasy spot blurs everything',
+          'Camera with GPS enabled — it makes the footage useful',
+          'Clear of airbags and your line of sight',
+          'Route the charging cable away from the controls',
         ],
       },
       {
@@ -433,11 +429,9 @@ export const en: SiteContent = {
           'Install DriveCam, open it and grant the permissions it asks for: camera, microphone, location and notifications. Then walk through these settings once — after that, recording is a single tap.',
         ],
         bullets: [
-          'Loop duration: 1–2 minutes keeps clip sizes manageable and storage predictable',
-          'Video quality: pick the highest your phone handles comfortably day after day',
-          'Storage limit: set 2–5 GB so cleanup happens automatically',
-          'Enable screen wake while charging, or background recording with the screen off',
-          'Turn on GPS data stamping — speed and coordinates are your best evidence',
+          'Loop duration: 1–2 minutes keeps clips and storage manageable',
+          'Storage limit: 2–5 GB cleans up automatically',
+          'Turn on GPS stamping — speed and coordinates are your best evidence',
         ],
       },
       {
@@ -445,13 +439,12 @@ export const en: SiteContent = {
         number: '03',
         title: 'Voice, stats and safety nets',
         paragraphs: [
-          'Once the basics work, turn on the features that make the camera feel like serious gear — and the ones that protect you when conditions get rough.',
+          'Once the basics work, enable the features that make daily driving easier and safer.',
         ],
         bullets: [
-          'Voice control: start and stop recording, lock clips and take photos without touching the phone',
-          'Speed display and speed-limit alerts for calm, aware driving',
-          'Night mode: automatic brightness boost when the light drops',
-          'Low-battery alerts so recording wraps up gracefully, not mid-clip',
+          'Voice control: record, lock clips and take photos hands-free',
+          'Speed display and speed-limit alerts',
+          'Night mode and low-battery alerts',
         ],
       },
       {
@@ -459,13 +452,12 @@ export const en: SiteContent = {
         number: '04',
         title: 'Beat heat and battery drain',
         paragraphs: [
-          'Heat is the number one killer of phone dash cams. A phone on a windshield in direct sun can hit its thermal limit within minutes — which is exactly why DriveCam monitors temperature and pauses recording before damage is done.',
+          'Heat is the number one killer of phone dash cams. DriveCam monitors temperature and pauses recording before damage is done — help it by keeping the phone out of direct sun and charging while recording.',
         ],
         bullets: [
-          'Park in shade or point the phone away from the sun when the car is off',
-          'Direct an air vent toward the phone on hot days',
-          'Keep the phone charging while recording — GPS and camera drain batteries fast',
-          'In winter, batteries drain quicker; a low-battery threshold keeps things predictable',
+          'Park in shade or move the phone out of the sun',
+          'Point an air vent at the phone on hot days',
+          'Keep it charging while recording — GPS and camera drain fast',
         ],
       },
       {
@@ -473,13 +465,12 @@ export const en: SiteContent = {
         number: '05',
         title: 'After an incident: lock it, report it',
         paragraphs: [
-          'When something happens, your only jobs are: keep the clip and hand over the facts. DriveCam is built for both.',
+          'When something happens, your only jobs are to keep the clip and hand over the facts. DriveCam is built for both.',
         ],
         bullets: [
-          'Lock the clip so automatic cleanup can never touch it',
-          'Generate the incident report PDF: date, time, GPS, map, maximum speed, duration',
-          'Share footage directly with your insurer or the police from the app',
-          'Save a copy somewhere safe before the phone changes hands',
+          'Lock the clip so cleanup can never touch it',
+          'Generate the incident report PDF with GPS, map and max speed',
+          'Share it with your insurer or the police from the app',
         ],
       },
     ],
@@ -487,8 +478,7 @@ export const en: SiteContent = {
     lawNote:
       'Dash cam rules differ from country to country — sometimes even between regions. Before mounting a camera, check the current regulations that apply where you drive. DriveCam is an aid, not legal advice.',
     ctaTitle: 'Ready to try it on your own windshield?',
-    ctaBody:
-      'DriveCam is free to download for iPhone and Android. This whole guide describes the app — minus the setup.',
+    ctaBody: 'DriveCam is free on iPhone and Android.',
   },
   legal: {
     eyebrow: 'Legal',

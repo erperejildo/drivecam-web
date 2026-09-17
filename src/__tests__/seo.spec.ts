@@ -23,9 +23,11 @@ describe('seo pages', () => {
   })
 
   it('uses unique titles and descriptions', () => {
-    const titles = pages.map((page) => page.title)
+    for (const locale of ['en', 'es'] as const) {
+      const titles = pages.filter((page) => page.locale === locale).map((page) => page.title)
+      expect(new Set(titles).size).toBe(titles.length)
+    }
     const descriptions = pages.map((page) => page.description)
-    expect(new Set(titles).size).toBe(titles.length)
     expect(new Set(descriptions).size).toBe(descriptions.length)
   })
 

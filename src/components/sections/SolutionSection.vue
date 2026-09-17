@@ -171,6 +171,7 @@ const imageAlt =
 
 .solution__image {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: var(--radius-l);
