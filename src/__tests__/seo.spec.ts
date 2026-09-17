@@ -13,9 +13,10 @@ describe('seo pages', () => {
   const pages = getSeoPages()
 
   it('generates one page per locale and route', () => {
-    expect(pages).toHaveLength(8)
+    expect(pages).toHaveLength(10)
     const paths = pages.map((page) => page.path)
     expect(paths).toContain('/en')
+    expect(paths).toContain('/en/features')
     expect(paths).toContain('/en/pricing')
     expect(paths).toContain('/es')
     expect(paths).toContain('/es/guide')

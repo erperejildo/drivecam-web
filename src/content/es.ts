@@ -5,20 +5,24 @@ export const es: SiteContent = {
   localeName: 'Español',
   meta: {
     home: {
-      title: 'App Dashcam — Cámara para Coche con GPS | DriveCam',
+      title: 'Dashcam para Coche con GPS | DriveCam',
       description:
         'DriveCam convierte tu móvil en una dashcam para coche. Grabación en bucle con GPS, almacenamiento privado, control por voz e informes de incidente. Gratis en iPhone y Android.',
     },
-    // TODO: precios de ejemplo — sustituir por los valores reales de RevenueCat cuando exista el proyecto DriveCam
-    pricing: {
-      title: 'Precios — App Dashcam Gratis vs PRO | DriveCam',
+    features: {
+      title: 'Funciones — Grabación en Bucle, GPS y Voz | DriveCam',
       description:
-        'Empieza gratis o pasa a PRO: suscripción mensual o pago único de por vida. Máxima calidad de vídeo, control de almacenamiento, streaming en vivo y estadísticas. Sin cuenta.',
+        'Todas las funciones de DriveCam: grabación en bucle, datos GPS, control por voz sin conexión, modo noche, protección térmica, informes de incidente y estadísticas.',
+    },
+    pricing: {
+      title: 'Precios — Gratis vs PRO de por Vida | DriveCam',
+      description:
+        'Empieza gratis o desbloquea PRO para siempre con un pago único. Máxima calidad de vídeo, control de almacenamiento, streaming en vivo y estadísticas. Sin cuenta.',
     },
     guide: {
       title: 'Cómo Convertir tu Móvil en Dashcam — Guía | DriveCam',
       description:
-        'Guía práctica para montar una dashcam con el móvil: soporte, ajustes de vídeo, batería, calor y qué dice la ley sobre grabar la carretera.',
+        'Guía práctica para montar una dashcam con el móvil: soporte, ajustes de vídeo, batería y calor — y la normativa local que debes consultar antes de grabar.',
     },
     legal: {
       title: 'Privacidad y Términos — DriveCam',
@@ -35,7 +39,7 @@ export const es: SiteContent = {
     links: [
       { label: 'Cómo funciona', to: '/guide/' },
       { label: 'Precios', to: '/pricing/' },
-      { label: 'Funciones', to: '/#features' },
+      { label: 'Funciones', to: '/features/' },
       { label: 'Preguntas', to: '/#faq' },
       { label: 'Contacto', to: '/#contact' },
     ],
@@ -49,7 +53,7 @@ export const es: SiteContent = {
       { label: 'Inicio', to: '/' },
       { label: 'Cómo configurarla', to: '/guide/' },
       { label: 'Precios', to: '/pricing/' },
-      { label: 'Funciones', to: '/#features' },
+      { label: 'Funciones', to: '/features/' },
       { label: 'Preguntas', to: '/#faq' },
       { label: 'Contacto', to: '/#contact' },
     ],
@@ -80,27 +84,16 @@ export const es: SiteContent = {
     title: 'Tu móvil ya es una',
     titleAccent: 'dashcam.',
     description:
-      'DriveCam es la grabadora para coche que convierte el móvil que llevas encima en un testigo fiable en cada trayecto. Vídeo en bucle con GPS, velocidad y hora grabados dentro — guardado en privado en tu móvil, nunca en tu galería. Sin hardware que comprar, sin cables y sin crear cuentas.',
+      'DriveCam es la cámara para coche que convierte tu móvil en un testigo fiable en cada trayecto. Vídeo en bucle con GPS, velocidad y hora grabados dentro — guardado en privado en tu móvil, nunca en tu galería. Sin hardware que comprar, sin cables y sin crear cuentas.',
     primaryCta: 'Descargar DriveCam gratis',
     secondaryCta: 'Ver qué desbloquea PRO',
     badges: ['Plan gratis disponible', 'Funciona sin conexión', 'Privada por diseño'],
-    hud: {
-      rec: 'REC',
-      timer: '02:41',
-      speed: '87',
-      speedUnit: 'km/h',
-      limit: '90',
-      coords: '40.4168° N · 3.7038° W',
-      status: 'GPS ACTIVO',
-      stamp: '2026-03-14 18:42:07',
-    },
   },
   stats: {
     eyebrow: 'Hecha para la carretera',
     items: [
       { value: '1 toque', label: 'Del soporte a grabar' },
       { value: '100%', label: 'Vídeo guardado en local, nunca subido' },
-      { value: '0', label: 'Archivos de DriveCam en tu galería de fotos' },
       { value: '1/2/3 min', label: 'Segmentos en bucle, los antiguos se reciclan' },
     ],
   },
@@ -127,11 +120,11 @@ export const es: SiteContent = {
       },
     ],
     closing:
-      'El problema nunca fue la cámara. Fue el software capaz de convertir el móvil que ya tienes en una grabadora de coche fiable.',
+      'El problema nunca fue la cámara. Fue el software capaz de convertir el móvil que ya tienes en una cámara para coche fiable.',
   },
   solution: {
     eyebrow: 'La solución',
-    title: 'Una grabadora de coche completa, construida alrededor de tu móvil.',
+    title: 'Una cámara para coche completa, construida alrededor de tu móvil.',
     description:
       'DriveCam se diseñó para la carretera desde el primer día: coloca el móvil, pulsa grabar y conduce. La grabación en bucle, el GPS, el modo noche, el control por voz — hasta la protección térmica — van solos.',
     steps: [
@@ -158,7 +151,7 @@ export const es: SiteContent = {
   },
   benefits: {
     eyebrow: 'Por qué DriveCam',
-    title: 'No es solo una grabadora. Es tu versión de los hechos.',
+    title: 'No es solo una cámara. Es tu versión de los hechos.',
     description:
       'Cada función existe para responder una pregunta: cuando pase algo, ¿tendrás lo necesario para demostrarlo?',
     items: [
@@ -274,12 +267,12 @@ export const es: SiteContent = {
       {
         question: '¿DriveCam es gratis de verdad?',
         answer:
-          'Sí. El plan gratis cubre la grabación del día a día: bucle, datos GPS, modo noche, control por voz y galería privada. PRO — una pequeña suscripción mensual o un pago único de por vida — desbloquea la máxima calidad de vídeo, control total del almacenamiento, streaming en vivo y estadísticas de conducción. También puedes desbloquear una prueba PRO de 7 días viendo unos cuantos anuncios cortos.',
+          'Sí. El plan gratis cubre la grabación del día a día: bucle, datos GPS, modo noche, control por voz y galería privada. PRO — un único pago — desbloquea la máxima calidad de vídeo, control total del almacenamiento, streaming en vivo y estadísticas de conducción. También puedes desbloquear una prueba PRO de 7 días viendo unos cuantos anuncios cortos.',
       },
       {
         question: '¿En qué se diferencia de una dashcam de hardware?',
         answer:
-          'Sin dispositivo que comprar, sin cableado y sin tarjetas de memoria. DriveCam usa el móvil que ya llevas en el soporte — o el viejo que guardas en un cajón — como grabadora completa. Las mismas pruebas, con cero hardware extra.',
+          'Sin dispositivo que comprar, sin cableado y sin tarjetas de memoria. DriveCam usa el móvil que ya llevas en el soporte — o el viejo que guardas en un cajón — como una cámara completa. Las mismas pruebas, con cero hardware extra.',
       },
       {
         question: '¿Dónde se guardan mis grabaciones?',
@@ -308,7 +301,7 @@ export const es: SiteContent = {
     title: 'Conduce con un testigo a bordo.',
     description:
       'Descarga DriveCam gratis para iPhone o Android. Empezar a grabar es un toque — y puede convertirse en la app más importante de tu móvil.',
-    note: 'Plan gratis disponible · PRO desde una pequeña cuota mensual o un pago único de por vida',
+    note: 'Plan gratis disponible · Desbloquea PRO para siempre con un pago único',
   },
   contact: {
     eyebrow: 'Contacto',
@@ -331,9 +324,9 @@ export const es: SiteContent = {
     eyebrow: 'Precios',
     title: 'Gratis para conducir. PRO cuando tú quieras.',
     description:
-      'Una app, dos formas de usarla. Empieza gratis y desbloquea todo con una suscripción mensual o con un único pago de por vida. Sin cuenta, sin rastreo y sin costes ocultos.',
+      'Una app, dos formas de usarla. Empieza gratis y desbloquea todo con un único pago — tuyo para siempre. Sin cuenta, sin rastreo y sin costes ocultos.',
     trust:
-      'Compras gestionadas con seguridad por App Store y Google Play · Cancela el plan mensual cuando quieras',
+      'Compras gestionadas con seguridad por App Store y Google Play · Pago único, sin suscripción · Precios con impuestos incluidos',
     plans: [
       {
         key: 'free',
@@ -356,35 +349,19 @@ export const es: SiteContent = {
         popular: false,
       },
       {
-        key: 'monthly',
-        name: 'PRO Mensual',
-        badge: null,
-        price: '2,99 €',
-        period: 'al mes',
-        summary: 'Todas las funciones PRO, mes a mes. Cancela cuando quieras.',
-        features: [
-          'Calidad de vídeo Alta y Máxima',
-          'Control total de la duración del bucle',
-          'Límites de almacenamiento hasta ilimitado',
-          'Streaming en vivo a tu propio servidor',
-          'Estadísticas e historial completos de conducción',
-          'Experiencia sin anuncios',
-        ],
-        ctaLabel: 'Empezar PRO mensual',
-        popular: false,
-      },
-      {
         key: 'lifetime',
         name: 'PRO de por vida',
         badge: 'Mejor precio',
-        price: '19,99 €',
+        price: '18,99 €',
         period: 'pago único',
         summary: 'Paga una vez y conserva PRO para siempre, incluidas las futuras novedades.',
         features: [
-          'Todo lo de PRO Mensual',
-          'Un solo pago, tuyo para siempre',
-          'Todas las funciones PRO futuras incluidas',
-          'La mejor opción si sigues conduciendo con DriveCam',
+          'Calidad de vídeo Alta y Máxima',
+          'Control total de la duración del bucle y del almacenamiento',
+          'Streaming en vivo a tu propio servidor',
+          'Estadísticas e historial completos de conducción',
+          'Experiencia sin anuncios',
+          'Un solo pago, tuyo para siempre — con las futuras funciones PRO',
         ],
         ctaLabel: 'Desbloquear PRO de por vida',
         popular: true,
@@ -404,9 +381,9 @@ export const es: SiteContent = {
           'Usable de verdad. El plan gratis graba, hace bucle, sella el GPS y mantiene tus clips privados: el trabajo esencial de una dashcam. PRO añade niveles de calidad, control de almacenamiento, streaming en vivo y estadísticas de conducción.',
       },
       {
-        question: '¿Qué diferencia hay entre mensual y de por vida?',
+        question: '¿Tengo que volver a pagar cuando lleguen nuevas funciones PRO?',
         answer:
-          'Las funciones son idénticas. El mensual reparte el coste y se puede cancelar cuando quieras; el de por vida es un único pago que mantiene PRO para siempre, incluidas las futuras actualizaciones. Si vas a seguir usando la app, el de por vida sale más barato en menos de un año.',
+          'No. PRO de por vida es un único pago: desbloqueas todo ahora y cada futura función PRO queda incluida. Sin renovaciones, sin recordatorios y sin suscripciones que gestionar.',
       },
       {
         question: '¿Cómo restauro mi compra en un móvil nuevo?',
@@ -414,14 +391,9 @@ export const es: SiteContent = {
           'Abre la pantalla PRO y pulsa Restaurar compras. Si has iniciado sesión con la misma cuenta de App Store o Google Play, tu PRO se desbloquea automáticamente: no guardamos nada por nuestra parte.',
       },
       {
-        question: '¿Cómo cancelo la suscripción mensual?',
+        question: '¿El precio es el mismo en todos los países?',
         answer:
-          'Cancela desde los ajustes de suscripciones de tu App Store o Google Play: un toque, sin correos y sin trucos de retención. Mantienes PRO hasta el final del periodo que ya has pagado.',
-      },
-      {
-        question: '¿Los precios son los mismos en mi país?',
-        answer:
-          'Tu tienda de aplicaciones aplica automáticamente el precio local al pagar y te muestra el importe exacto en tu moneda antes de confirmar.',
+          'El precio sigue la tienda local de App Store o Google Play, con los impuestos aplicables incluidos, así que el importe que ves al pagar es el definitivo. El precio de esta página se adapta al país desde el que nos visitas.',
       },
     ],
   },
@@ -429,45 +401,31 @@ export const es: SiteContent = {
     eyebrow: 'Guía de configuración',
     title: 'Cómo convertir tu móvil en dashcam',
     description:
-      'Todo lo necesario para montar una dashcam con el móvil que aguante carreteras de verdad: soporte, ajustes, batería, calor y lo que la ley espera de ti.',
+      'Todo lo necesario para montar una dashcam con el móvil que aguante carreteras de verdad: soporte, ajustes, batería, calor y la normativa local que debes consultar antes de grabar.',
     intro: [
       'Una dashcam con el móvil no es solo "una cámara apuntando a la carretera". Para servir cuando importa, tiene que grabar en bucle, sobrevivir al calor del verano, gestionar la pantalla de forma inteligente y sellar el vídeo con los datos que necesitarás después: cuándo, dónde y a qué velocidad.',
       'Esta guía repasa una configuración que funciona — y los errores que hacen que las dashcam de móvil fallen justo cuando alguien necesita el vídeo.',
     ],
-    updated: 'Última actualización: marzo de 2026',
     sections: [
       {
-        id: 'device',
-        number: '01',
-        title: 'Elige el móvil adecuado',
-        paragraphs: [
-          'Sirve cualquier iPhone o Android razonablemente moderno. Pero el candidato perfecto suele ser el móvil que duerme en un cajón: un móvil dedicado puede quedarse en el coche, montado y cargando de forma permanente, mientras tu móvil de diario sigue en tu bolsillo.',
-        ],
-        bullets: [
-          'Un móvil con una cámara trasera decente (1080p sobra para pruebas)',
-          'Espacio suficiente: DriveCam recicla los clips, pero déjale 2–5 GB',
-          'La salud de la batería importa: un móvil que se apaga con el calor te fallará en julio',
-          'Mantén el GPS activado: es lo que hace que el vídeo sea legalmente útil',
-        ],
-      },
-      {
         id: 'mount',
-        number: '02',
-        title: 'Colócalo como si fuera en serio',
+        number: '01',
+        title: 'Elige el móvil y colócalo bien',
         paragraphs: [
+          'Sirve cualquier iPhone o Android razonablemente moderno — y el candidato perfecto suele ser el móvil que duerme en un cajón: un móvil dedicado puede quedarse en el coche, montado y cargando de forma permanente, mientras tu móvil de diario sigue en tu bolsillo.',
           'La posición decide si tu grabación sirve o no vale nada. La cámara debe ver la carretera por delante y el máximo de la escena posible: ni cielo, ni salpicadero, ni el dorso del espejo.',
         ],
         bullets: [
+          'Un móvil con una cámara trasera decente (1080p sobra para pruebas) y el GPS activado — es lo que hace útil el vídeo',
           'En el centro-arriba del parabrisas, o sobre el salpicadero tras la línea de los limpias',
           'Lejos de los airbags y de cualquier cosa que te tape la vista',
-          'Vertical u horizontal: DriveCam puede bloquear la orientación',
           'Pasa el cable de carga de forma que nunca cruce los mandos',
           'Limpia el cristal donde lo pegues: una mancha de grasa emborrona todo',
         ],
       },
       {
         id: 'settings',
-        number: '03',
+        number: '02',
         title: 'Configura DriveCam en cinco minutos',
         paragraphs: [
           'Instala DriveCam, ábrela y concede los permisos que pide: cámara, micrófono, ubicación y notificaciones. Después repasa estos ajustes una vez — a partir de ahí, grabar es un solo toque.',
@@ -482,7 +440,7 @@ export const es: SiteContent = {
       },
       {
         id: 'extras',
-        number: '04',
+        number: '03',
         title: 'Voz, estadísticas y redes de seguridad',
         paragraphs: [
           'Cuando lo básico funcione, activa las funciones que hacen que la cámara parezca equipo serio — y las que te protegen cuando las condiciones se complican.',
@@ -496,7 +454,7 @@ export const es: SiteContent = {
       },
       {
         id: 'heat',
-        number: '05',
+        number: '04',
         title: 'Vence al calor y al consumo de batería',
         paragraphs: [
           'El calor es el asesino número uno de las dashcam con móvil. Un teléfono al sol en el parabrisas puede alcanzar su límite térmico en minutos — y por eso DriveCam vigila la temperatura y pausa la grabación antes de causar daños.',
@@ -510,7 +468,7 @@ export const es: SiteContent = {
       },
       {
         id: 'incident',
-        number: '06',
+        number: '05',
         title: 'Tras un incidente: bloquéalo, documéntalo',
         paragraphs: [
           'Cuando ocurre algo, solo tienes dos tareas: conservar el clip y entregar los hechos. DriveCam está hecha para las dos.',
@@ -522,16 +480,10 @@ export const es: SiteContent = {
           'Guarda una copia en un sitio seguro antes de que el móvil cambie de manos',
         ],
       },
-      {
-        id: 'law',
-        number: '07',
-        title: '¿Qué dice la ley?',
-        paragraphs: [
-          'Las normas sobre dashcam varían según el país — y a veces según la comunidad o región. Grabar la carretera suele estar permitido, pero la grabación de audio, ciertas posiciones del soporte o publicar el vídeo en internet pueden estar restringidos. Consulta las normas locales antes de montar la cámara y no dejes que una dashcam se convierta en una distracción. DriveCam es una ayuda, no un sustituto de la atención.',
-        ],
-        bullets: [],
-      },
     ],
+    lawTitle: 'Consulta la normativa donde conduces',
+    lawNote:
+      'Las normas sobre dashcams cambian de un país a otro, y a veces incluso entre regiones. Antes de montar una cámara, consulta la normativa vigente que se aplica donde conduces. DriveCam es una ayuda, no asesoramiento legal.',
     ctaTitle: '¿Listo para probarla en tu propio parabrisas?',
     ctaBody:
       'DriveCam se descarga gratis para iPhone y Android. Toda esta guía describe la app — menos la configuración.',
@@ -615,7 +567,7 @@ export const es: SiteContent = {
         id: 'purchases',
         title: '3. Compras',
         paragraphs: [
-          'Las funciones PRO se desbloquean mediante compras dentro de la app procesadas por la App Store o Google Play. El plan de por vida es un pago único; las suscripciones mensuales se renuevan automáticamente hasta que las canceles en tu cuenta de la tienda. Las devoluciones las gestiona la tienda que procesó el pago.',
+          'Las funciones PRO se desbloquean mediante compras dentro de la app procesadas por la App Store o Google Play. PRO de por vida es un único pago — no se renueva. Las devoluciones las gestiona la tienda que procesó el pago.',
         ],
       },
       {

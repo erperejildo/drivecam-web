@@ -5,20 +5,24 @@ export const en: SiteContent = {
   localeName: 'English',
   meta: {
     home: {
-      title: 'Dash Cam App — Turn Your Phone Into a Dashcam | DriveCam',
+      title: 'Turn Your Phone Into a Dashcam | DriveCam',
       description:
         'DriveCam turns your phone into a powerful dash cam. Loop recording with GPS, private storage, voice control and incident reports. Free on iPhone and Android.',
     },
-    // TODO: placeholder prices — replace with real RevenueCat values once the DriveCam project exists in RevenueCat
-    pricing: {
-      title: 'Pricing — Free Dash Cam App vs PRO | DriveCam',
+    features: {
+      title: 'Features — Loop Recording, GPS & Voice Control | DriveCam',
       description:
-        'Start free or go PRO: monthly or one-time lifetime unlock. Maximum video quality, unlimited storage control, live streaming and driving stats. No account needed.',
+        'Every DriveCam feature: loop recording, GPS speed stamp, offline voice control, night mode, heat protection, incident reports and driving statistics.',
+    },
+    pricing: {
+      title: 'Pricing — Free vs PRO Lifetime | DriveCam',
+      description:
+        'Start free or unlock PRO forever with a one-time purchase. High and maximum video quality, storage control, live streaming and driving stats. No account needed.',
     },
     guide: {
       title: 'How to Turn Your Phone Into a Dashcam — Guide | DriveCam',
       description:
-        'A practical guide to setting up a phone dashcam: mounting, video settings, battery and heat management, and what the law says about dash cams.',
+        'A practical guide to setting up a phone dashcam: mounting, video settings, battery and heat management — and the local rules to check before you record.',
     },
     legal: {
       title: 'Privacy Policy & Terms — DriveCam',
@@ -36,7 +40,7 @@ export const en: SiteContent = {
     links: [
       { label: 'How it works', to: '/guide/' },
       { label: 'Pricing', to: '/pricing/' },
-      { label: 'Features', to: '/#features' },
+      { label: 'Features', to: '/features/' },
       { label: 'FAQ', to: '/#faq' },
       { label: 'Contact', to: '/#contact' },
     ],
@@ -50,7 +54,7 @@ export const en: SiteContent = {
       { label: 'Home', to: '/' },
       { label: 'How to set it up', to: '/guide/' },
       { label: 'Pricing', to: '/pricing/' },
-      { label: 'Features', to: '/#features' },
+      { label: 'Features', to: '/features/' },
       { label: 'FAQ', to: '/#faq' },
       { label: 'Contact', to: '/#contact' },
     ],
@@ -82,27 +86,16 @@ export const en: SiteContent = {
     title: 'Your phone is already a',
     titleAccent: 'dashcam.',
     description:
-      'DriveCam is the car camera recorder that turns the phone you carry into a reliable witness on every drive. Loop-recorded video with GPS, speed and time stamped in — stored privately on your phone, never in your gallery. No hardware to buy, no cables to run, no account to create.',
+      'DriveCam is the car camera recorder that turns your phone into a reliable witness on every drive. Loop-recorded video with GPS, speed and time stamped in — stored privately on your phone, never in your gallery. No hardware to buy, no cables to run, no account to create.',
     primaryCta: 'Get DriveCam free',
     secondaryCta: 'See what PRO unlocks',
     badges: ['Free plan available', 'Works offline', 'Private by design'],
-    hud: {
-      rec: 'REC',
-      timer: '02:41',
-      speed: '87',
-      speedUnit: 'km/h',
-      limit: '90',
-      coords: '40.4168° N · 3.7038° W',
-      status: 'GPS LOCKED',
-      stamp: '2026-03-14 18:42:07',
-    },
   },
   stats: {
     eyebrow: 'Built for the road',
     items: [
       { value: '1 tap', label: 'From mount to recording' },
       { value: '100%', label: 'Footage stored locally, never uploaded' },
-      { value: '0', label: 'DriveCam files in your photo gallery' },
       { value: '1/2/3 min', label: 'Loop segments, old clips rotate out' },
     ],
   },
@@ -275,7 +268,7 @@ export const en: SiteContent = {
       {
         question: 'Is DriveCam really free?',
         answer:
-          'Yes. The free plan covers everyday recording: loop recording, GPS stamps, night mode, voice control and the private gallery. PRO — a small monthly subscription or a one-time lifetime purchase — unlocks maximum video quality, full storage control, live streaming and driving statistics. You can also unlock a 7-day PRO trial by watching a few short rewarded ads.',
+          'Yes. The free plan covers everyday recording: loop recording, GPS stamps, night mode, voice control and the private gallery. PRO — a single one-time purchase — unlocks maximum video quality, full storage control, live streaming and driving statistics. You can also unlock a 7-day PRO trial by watching a few short rewarded ads.',
       },
       {
         question: 'How is this different from a hardware dash cam?',
@@ -309,7 +302,7 @@ export const en: SiteContent = {
     title: 'Start driving with a witness.',
     description:
       'Download DriveCam free for iPhone or Android. It takes one tap to start recording — and it might become the most important app on your phone.',
-    note: 'Free plan available · PRO from a small monthly fee or one-time lifetime purchase',
+    note: 'Free plan available · Unlock PRO forever with a one-time purchase',
   },
   contact: {
     eyebrow: 'Contact',
@@ -333,9 +326,9 @@ export const en: SiteContent = {
     eyebrow: 'Pricing',
     title: 'Free to drive. PRO when you are ready.',
     description:
-      'One app, two ways to use it. Start free, then unlock everything with a monthly subscription or a single lifetime purchase. No account, no tracking, no hidden fees.',
+      'One app, two ways to use it. Start free, then unlock everything with a single purchase — yours forever. No account, no tracking, no hidden fees.',
     trust:
-      'Purchases handled securely by the App Store and Google Play · Cancel the monthly plan anytime',
+      'Purchases handled securely by the App Store and Google Play · One-time payment, no subscription · Prices include applicable taxes',
     plans: [
       {
         key: 'free',
@@ -358,35 +351,19 @@ export const en: SiteContent = {
         popular: false,
       },
       {
-        key: 'monthly',
-        name: 'PRO Monthly',
-        badge: null,
-        price: '$2.99',
-        period: 'per month',
-        summary: 'Every PRO feature, month to month. Cancel whenever you want.',
-        features: [
-          'High and Maximum video quality',
-          'Full loop duration control',
-          'Custom storage limits up to unlimited',
-          'Live streaming to your own server',
-          'Complete driving statistics and history',
-          'Ad-free experience',
-        ],
-        ctaLabel: 'Start monthly PRO',
-        popular: false,
-      },
-      {
         key: 'lifetime',
         name: 'PRO Lifetime',
         badge: 'Best value',
-        price: '$19.99',
+        price: '$24.99',
         period: 'one-time purchase',
         summary: 'Pay once, keep PRO forever — including all future updates.',
         features: [
-          'Everything in PRO Monthly',
-          'One payment, yours forever',
-          'All future PRO features included',
-          'The best deal if you keep driving with DriveCam',
+          'High and Maximum video quality',
+          'Full loop duration and storage control',
+          'Live streaming to your own server',
+          'Complete driving statistics and history',
+          'Ad-free experience',
+          'One payment, yours forever — future PRO features included',
         ],
         ctaLabel: 'Unlock lifetime PRO',
         popular: true,
@@ -406,9 +383,9 @@ export const en: SiteContent = {
           'Really usable. The free plan records, loops, stamps GPS and keeps your clips private — the core job of a dash cam. PRO adds quality tiers, storage control, live streaming and driving statistics on top.',
       },
       {
-        question: 'What is the difference between monthly and lifetime?',
+        question: 'Do I have to pay again when new PRO features arrive?',
         answer:
-          'The features are identical. Monthly spreads the cost and can be cancelled anytime; lifetime is a single payment that keeps PRO forever, including all future updates. If you plan to keep the app, lifetime is cheaper within a year.',
+          'No. PRO Lifetime is a single payment: everything is unlocked now, and every future PRO feature is included. No renewals, no reminders, no subscription to manage.',
       },
       {
         question: 'How do I restore a purchase on a new phone?',
@@ -416,14 +393,9 @@ export const en: SiteContent = {
           'Open the PRO screen and tap Restore Purchases. As long as you are signed in with the same App Store or Google Play account, your PRO unlocks automatically — nothing is stored on our side.',
       },
       {
-        question: 'How do I cancel the monthly subscription?',
+        question: 'Is the price the same in every country?',
         answer:
-          'Cancel from your App Store or Google Play subscription settings — one tap, no emails, no retention tricks. You keep PRO until the end of the period you already paid for.',
-      },
-      {
-        question: 'Why are prices shown in dollars?',
-        answer:
-          'Your app store applies local pricing automatically at checkout and shows the exact amount in your currency before you confirm.',
+          'Prices follow your local App Store or Google Play storefront, including applicable taxes, so the amount you see at checkout is final. The price on this page adapts to the country you are visiting from.',
       },
     ],
   },
@@ -431,45 +403,31 @@ export const en: SiteContent = {
     eyebrow: 'Setup guide',
     title: 'How to turn your phone into a dashcam',
     description:
-      'Everything you need to set up a phone dash cam that actually holds up on real roads — mounting, settings, battery, heat, and what the law expects from you.',
+      'Everything you need to set up a phone dash cam that actually holds up on real roads — mounting, settings, battery, heat, and the local rules to check before you record.',
     intro: [
       'A phone dash cam is not just "a camera pointed at the road". To be useful when it matters, it needs to record in loops, survive summer heat, keep the screen on (or off) intelligently, and stamp the footage with the facts you will need later: when, where and how fast.',
       'This guide walks through a setup that works — and the mistakes that make phone dash cams fail right when someone needs the footage.',
     ],
-    updated: 'Last updated: March 2026',
     sections: [
       {
-        id: 'device',
-        number: '01',
-        title: 'Pick the right phone',
-        paragraphs: [
-          'Any reasonably modern iPhone or Android phone works as a dash cam. But the perfect candidate is often the phone sitting unused in a drawer: a dedicated dash cam phone can stay in the car, permanently mounted and permanently charging — while your daily phone keeps living in your pocket.',
-        ],
-        bullets: [
-          'A phone with a decent rear camera (1080p is plenty for evidence)',
-          'Enough storage headroom — DriveCam rotates clips, but give it 2–5 GB',
-          'Battery health matters: a phone that shuts down in heat will betray you in July',
-          'Keep GPS enabled — it is what makes footage legally useful',
-        ],
-      },
-      {
         id: 'mount',
-        number: '02',
-        title: 'Mount it like you mean it',
+        number: '01',
+        title: 'Pick a phone and mount it right',
         paragraphs: [
+          'Any reasonably modern iPhone or Android works as a dash cam — and the perfect candidate is often the phone sitting unused in a drawer: a dedicated dash cam phone can stay in the car, permanently mounted and permanently charged, while your daily phone keeps living in your pocket.',
           'Position decides whether your footage is useful or worthless. The camera should see the road ahead and as much of the scene as possible — not the sky, not your dashboard, not the back of your mirror.',
         ],
         bullets: [
+          'A phone with a decent rear camera (1080p is plenty for evidence) and GPS enabled — it is what makes footage useful',
           'Top-center of the windshield, or on the dashboard behind the wiper line',
           'Keep it clear of airbags and anything that blocks your view of the road',
-          'Portrait or landscape both work — DriveCam can lock orientation',
           'Route the charging cable so it never crosses your controls',
           'Clean the glass where you mount it; a greasy spot blurs everything',
         ],
       },
       {
         id: 'settings',
-        number: '03',
+        number: '02',
         title: 'Set up DriveCam in five minutes',
         paragraphs: [
           'Install DriveCam, open it and grant the permissions it asks for: camera, microphone, location and notifications. Then walk through these settings once — after that, recording is a single tap.',
@@ -484,7 +442,7 @@ export const en: SiteContent = {
       },
       {
         id: 'extras',
-        number: '04',
+        number: '03',
         title: 'Voice, stats and safety nets',
         paragraphs: [
           'Once the basics work, turn on the features that make the camera feel like serious gear — and the ones that protect you when conditions get rough.',
@@ -498,7 +456,7 @@ export const en: SiteContent = {
       },
       {
         id: 'heat',
-        number: '05',
+        number: '04',
         title: 'Beat heat and battery drain',
         paragraphs: [
           'Heat is the number one killer of phone dash cams. A phone on a windshield in direct sun can hit its thermal limit within minutes — which is exactly why DriveCam monitors temperature and pauses recording before damage is done.',
@@ -512,7 +470,7 @@ export const en: SiteContent = {
       },
       {
         id: 'incident',
-        number: '06',
+        number: '05',
         title: 'After an incident: lock it, report it',
         paragraphs: [
           'When something happens, your only jobs are: keep the clip and hand over the facts. DriveCam is built for both.',
@@ -524,16 +482,10 @@ export const en: SiteContent = {
           'Save a copy somewhere safe before the phone changes hands',
         ],
       },
-      {
-        id: 'law',
-        number: '07',
-        title: 'What does the law say?',
-        paragraphs: [
-          'Dash cam rules differ by country — and sometimes by state or region. Recording the road is generally allowed, but audio recording, specific mounting positions, or publishing footage online can be restricted. Check your local rules before mounting a camera, and never let a dash cam become a distraction. DriveCam is an aid, not a substitute for attention.',
-        ],
-        bullets: [],
-      },
     ],
+    lawTitle: 'Check the rules where you drive',
+    lawNote:
+      'Dash cam rules differ from country to country — sometimes even between regions. Before mounting a camera, check the current regulations that apply where you drive. DriveCam is an aid, not legal advice.',
     ctaTitle: 'Ready to try it on your own windshield?',
     ctaBody:
       'DriveCam is free to download for iPhone and Android. This whole guide describes the app — minus the setup.',
@@ -617,7 +569,7 @@ export const en: SiteContent = {
         id: 'purchases',
         title: '3. Purchases',
         paragraphs: [
-          'PRO features are unlocked through in-app purchases processed by the App Store or Google Play. Lifetime is a one-time purchase; monthly subscriptions renew automatically until cancelled in your store account. Refunds are handled by the store that processed the payment.',
+          'PRO features are unlocked through in-app purchases processed by the App Store or Google Play. PRO Lifetime is a single, one-time payment — it does not renew. Refunds are handled by the store that processed the payment.',
         ],
       },
       {

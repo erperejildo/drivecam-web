@@ -65,7 +65,7 @@ describe('content parity', () => {
   })
 
   it('provides meta for every route key in every locale', () => {
-    const routeKeys = ['home', 'pricing', 'guide', 'legal', 'notFound'] as const
+    const routeKeys = ['home', 'features', 'pricing', 'guide', 'legal', 'notFound'] as const
     for (const locale of locales) {
       const site: SiteContent = content[locale]
       for (const key of routeKeys) {

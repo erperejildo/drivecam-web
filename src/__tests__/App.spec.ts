@@ -27,9 +27,10 @@ describe('App shell', () => {
     expect(wrapper.text()).toContain('DriveCam')
   })
 
-  it('renders internal links to the pricing and guide pages', async () => {
+  it('renders internal links to the features, pricing and guide pages', async () => {
     const { wrapper } = await mountApp('/en')
     const html = wrapper.html()
+    expect(html).toContain('/en/features')
     expect(html).toContain('/en/pricing')
     expect(html).toContain('/en/guide')
   })

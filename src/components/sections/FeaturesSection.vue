@@ -7,7 +7,7 @@ const { site } = useLocale()
 </script>
 
 <template>
-  <section id="features" class="section features">
+  <section class="section features">
     <div class="shell">
       <SectionIntro
         v-reveal

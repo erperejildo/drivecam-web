@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { useLocale } from '@/composables/useLocale'
+import { useLifetimePrice } from '@/composables/useLifetimePrice'
 import AppButton from '@/components/shared/AppButton.vue'
 import IconGlyph from '@/components/shared/IconGlyph.vue'
 import FaqSection from '@/components/sections/FaqSection.vue'
 import DownloadSection from '@/components/sections/DownloadSection.vue'
 
 const { site } = useLocale()
+const { price: lifetimePrice } = useLifetimePrice()
 </script>
 
 <template>
@@ -41,7 +43,7 @@ const { site } = useLocale()
             </header>
 
             <p class="pricing-card__price">
-              <strong>{{ plan.price }}</strong>
+              <strong>{{ plan.key === 'lifetime' ? lifetimePrice : plan.price }}</strong>
               <span class="pricing-card__period">{{ plan.period }}</span>
             </p>
 
@@ -157,7 +159,9 @@ const { site } = useLocale()
   align-items: stretch;
 
   @include bp.from(bp.$bp-md) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 56rem;
+    margin-inline: auto;
   }
 }
 

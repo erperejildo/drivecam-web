@@ -69,6 +69,8 @@ jobs:
           test -f dist/robots.txt
           test -f dist/en/index.html
           test -f dist/es/index.html
+          test -f dist/en/features/index.html
+          test -f dist/es/features/index.html
           test -f dist/en/pricing/index.html
           test -f dist/es/pricing/index.html
           test -f dist/en/guide/index.html
@@ -143,7 +145,7 @@ jobs:
           set -e
           sleep 15
           base="https://erperejildo.github.io/drivecam-web"
-          for path in "" "en/" "es/" "en/pricing/" "es/guide/" "sitemap.xml"; do
+          for path in "" "en/" "es/" "en/features/" "en/pricing/" "es/guide/" "sitemap.xml"; do
             code=$(curl -sL -o /dev/null -w "%{http_code}" "$base/$path")
             echo "$base/$path -> $code"
             if [ "$code" != "200" ]; then

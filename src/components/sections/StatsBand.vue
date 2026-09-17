@@ -46,7 +46,7 @@ const { site } = useLocale()
   margin: 0;
 
   @include bp.from(bp.$bp-lg) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

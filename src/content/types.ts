@@ -1,6 +1,6 @@
 export type SiteLocale = 'en' | 'es'
 
-export type RouteKey = 'home' | 'pricing' | 'guide' | 'legal' | 'notFound'
+export type RouteKey = 'home' | 'features' | 'pricing' | 'guide' | 'legal' | 'notFound'
 
 export type IconName =
   | 'arrow'
@@ -65,7 +65,7 @@ export interface Step {
 }
 
 export interface PricingPlan {
-  key: 'free' | 'monthly' | 'lifetime'
+  key: 'free' | 'lifetime'
   name: string
   badge: string | null
   price: string
@@ -111,17 +111,6 @@ export interface PageMeta {
   description: string
 }
 
-export interface HeroHud {
-  rec: string
-  timer: string
-  speed: string
-  speedUnit: string
-  limit: string
-  coords: string
-  status: string
-  stamp: string
-}
-
 export interface SiteContent {
   locale: SiteLocale
   localeName: string
@@ -153,7 +142,6 @@ export interface SiteContent {
     primaryCta: string
     secondaryCta: string
     badges: string[]
-    hud: HeroHud
   }
   stats: {
     eyebrow: string
@@ -217,8 +205,9 @@ export interface SiteContent {
     title: string
     description: string
     intro: string[]
-    updated: string
     sections: GuideSection[]
+    lawTitle: string
+    lawNote: string
     ctaTitle: string
     ctaBody: string
   }

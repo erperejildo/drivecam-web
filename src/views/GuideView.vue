@@ -14,7 +14,6 @@ const { locale, site } = useLocale()
         <span class="eyebrow" v-reveal>{{ site.guide.eyebrow }}</span>
         <h1 class="guide-hero__title" v-reveal="60">{{ site.guide.title }}</h1>
         <p class="guide-hero__description" v-reveal="120">{{ site.guide.description }}</p>
-        <p class="guide-hero__updated mono" v-reveal="180">{{ site.guide.updated }}</p>
       </div>
     </section>
 
@@ -53,6 +52,11 @@ const { locale, site } = useLocale()
             </div>
           </li>
         </ol>
+
+        <div class="guide-law" v-reveal>
+          <h2 class="guide-law__title">{{ site.guide.lawTitle }}</h2>
+          <p class="guide-law__body">{{ site.guide.lawNote }}</p>
+        </div>
 
         <div class="guide-cta" v-reveal>
           <h2 class="guide-cta__title">{{ site.guide.ctaTitle }}</h2>
@@ -102,11 +106,6 @@ const { locale, site } = useLocale()
   color: var(--color-ink-muted);
   font-size: var(--text-lead);
   line-height: var(--line-body);
-}
-
-.guide-hero__updated {
-  color: var(--color-ink-faint);
-  font-size: var(--text-small);
 }
 
 .guide-body__shell {
@@ -195,6 +194,26 @@ const { locale, site } = useLocale()
       color: var(--color-accent-strong);
     }
   }
+}
+
+.guide-law {
+  display: grid;
+  gap: var(--space-2xs);
+  margin-top: var(--space-xl);
+  padding: var(--card-padding);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, var(--color-card-hover), var(--color-card));
+}
+
+.guide-law__title {
+  font-size: var(--text-h3);
+}
+
+.guide-law__body {
+  color: var(--color-ink-muted);
+  line-height: var(--line-body);
+  max-width: 46rem;
 }
 
 .guide-cta {

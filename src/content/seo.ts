@@ -14,10 +14,11 @@ export const OG_IMAGE = `${SITE_URL}/img/og-image.png`
 
 export type SeoRouteKey = Exclude<RouteKey, 'notFound'>
 
-export const SEO_ROUTES: SeoRouteKey[] = ['home', 'pricing', 'guide', 'legal']
+export const SEO_ROUTES: SeoRouteKey[] = ['home', 'features', 'pricing', 'guide', 'legal']
 
 const SEGMENTS: Record<SeoRouteKey, string> = {
   home: '',
+  features: 'features',
   pricing: 'pricing',
   guide: 'guide',
   legal: 'legal',

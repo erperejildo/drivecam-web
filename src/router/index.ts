@@ -1,6 +1,7 @@
 import { createRouter } from 'vue-router'
 import type { RouterHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import FeaturesView from '@/views/FeaturesView.vue'
 import PricingView from '@/views/PricingView.vue'
 import GuideView from '@/views/GuideView.vue'
 import LegalView from '@/views/LegalView.vue'
@@ -15,6 +16,7 @@ export function createAppRouter(history: RouterHistory) {
         path: '/:locale(en|es)',
         children: [
           { path: '', name: 'home', component: HomeView },
+          { path: 'features', name: 'features', component: FeaturesView },
           { path: 'pricing', name: 'pricing', component: PricingView },
           { path: 'guide', name: 'guide', component: GuideView },
           { path: 'legal', name: 'legal', component: LegalView },

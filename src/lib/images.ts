@@ -5,4 +5,5 @@ export const images = {
   appIconForeground: `${base}img/app-icon-foreground.png`,
   appLaunch: `${base}img/app-launch.png`,
   onboardingPhone: `${base}img/onboarding-phone.png`,
+  solutionDrive: `${base}img/solution-drive.svg`,
 } as const

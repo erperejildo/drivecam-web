@@ -7,8 +7,8 @@ const { locale, site } = useLocale()
 
 const imageAlt =
   locale.value === 'es'
-    ? 'Móvil colocado en el salpicadero listo para grabar'
-    : 'Phone mounted on the dashboard ready to record'
+    ? 'Vista nocturna de la carretera desde el asiento del conductor'
+    : 'Night view of the road ahead from the driver seat'
 </script>
 
 <template>
@@ -42,12 +42,13 @@ const imageAlt =
 
       <div v-reveal="140" class="solution__visual">
         <div class="solution__frame">
+          <!-- TODO: replace the placeholder below with a real landscape photo (16:10) of the phone mounted in a car -->
           <img
             class="solution__image"
-            :src="images.onboardingPhone"
+            :src="images.solutionDrive"
             :alt="imageAlt"
-            width="720"
-            height="720"
+            width="1280"
+            height="800"
             loading="lazy"
           />
         </div>
@@ -151,7 +152,7 @@ const imageAlt =
 
 .solution__frame {
   position: relative;
-  width: min(26rem, 100%);
+  width: min(34rem, 100%);
   padding: var(--space-m);
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border);
@@ -170,6 +171,8 @@ const imageAlt =
 
 .solution__image {
   width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: var(--radius-l);
 }
 </style>

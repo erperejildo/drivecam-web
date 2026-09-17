@@ -4,7 +4,6 @@ import StatsBand from '@/components/sections/StatsBand.vue'
 import GapSection from '@/components/sections/GapSection.vue'
 import SolutionSection from '@/components/sections/SolutionSection.vue'
 import BenefitsSection from '@/components/sections/BenefitsSection.vue'
-import FeaturesSection from '@/components/sections/FeaturesSection.vue'
 import FaqSection from '@/components/sections/FaqSection.vue'
 import DownloadSection from '@/components/sections/DownloadSection.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
@@ -20,7 +19,6 @@ const { site } = useLocale()
     <GapSection />
     <SolutionSection />
     <BenefitsSection />
-    <FeaturesSection />
     <FaqSection
       :eyebrow="site.faq.eyebrow"
       :title="site.faq.title"
