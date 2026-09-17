@@ -146,7 +146,7 @@ jobs:
           sleep 15
           base="https://erperejildo.github.io/drivecam-web"
           for path in "" "en/" "es/" "en/features/" "en/pricing/" "es/guide/" "sitemap.xml"; do
-            code=$(curl -sL -o /dev/null -w "%{http_code}" "$base/$path")
+            code=$(curl -sL -o /dev/null -w "%{http_code}" --retry 5 --retry-all-errors --retry-delay 5 "$base/$path")
             echo "$base/$path -> $code"
             if [ "$code" != "200" ]; then
               echo "Smoke test failed for $base/$path"
