@@ -4,7 +4,7 @@ Marketing website for the [DriveCam](https://github.com/erperejildo/drivecam-web
 
 Static, prerendered, bilingual (English / Spanish), SEO-focused. Built with Vue 3, Vite, TypeScript and SCSS design tokens.
 
-Live site: https://erperejildo.github.io/drivecam-web/
+Live site: https://drivecam.store/
 
 ## Stack
 
@@ -18,7 +18,7 @@ Live site: https://erperejildo.github.io/drivecam-web/
 
 | Script                 | Purpose                                          |
 | ---------------------- | ------------------------------------------------ |
-| `npm run dev`          | Dev server (base path `/drivecam-web/`)          |
+| `npm run dev`          | Dev server (base path `/`)                       |
 | `npm run build`        | Type check + client build + prerender to `dist/` |
 | `npm run preview`      | Preview the production build                     |
 | `npm run test`         | Unit tests (vitest run)                          |
@@ -48,7 +48,7 @@ Pushing to `main` runs `.github/workflows/deploy.yml`: formatting, lint, type ch
 
 Two constants must stay in sync if the site moves:
 
-- `base` in `vite.config.ts` (`/drivecam-web/`)
+- `base` in `vite.config.ts` (`/`)
 - `BASE_PATH` and `SITE_URL` in `src/content/seo.ts`
 
 ## Open TODOs
