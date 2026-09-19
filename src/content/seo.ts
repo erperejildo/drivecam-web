@@ -3,9 +3,9 @@ import type { RouteKey, SiteLocale } from './types'
 import { STORE_LINKS } from '@/lib/mailto'
 
 // Keep in sync with the `base` option in vite.config.ts
-export const BASE_PATH = '/drivecam-web/'
+export const BASE_PATH = '/'
 
-export const SITE_URL = 'https://erperejildo.github.io/drivecam-web'
+export const SITE_URL = 'https://drivecam.store'
 
 export const DEFAULT_LOCALE: SiteLocale = 'en'
 
