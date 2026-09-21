@@ -28,6 +28,10 @@ DriveCam is a lightweight mobile dash cam app designed to let drivers use an iPh
 
 - [Features Overview](https://drivecam.store/en/features/): Detailed specifications of all 12 recording, safety, and telemetry features.
 - [Setup & User Guide](https://drivecam.store/en/guide/): Windshield mounting techniques, recommended resolution settings, thermal mitigation, and local dashcam regulations.
+- [Blog & Guides Hub](https://drivecam.store/en/blog/): Driving guides, accident liability insights, and hardware comparisons.
+  - [Dashcam Accident Court Evidence](https://drivecam.store/en/blog/dashcam-accident-court-evidence/): How dashcam video proves innocence in court and insurance claims.
+  - [Best Dashcams Comparison & Savings](https://drivecam.store/en/blog/best-dashcams-comparison-save-money/): Comparing Garmin, Nextbase, and Vantrue against DriveCam to save $300+.
+  - [Turn Old Phone into Dashcam](https://drivecam.store/en/blog/how-to-turn-old-phone-into-dashcam/): Complete tutorial on repurposing an old smartphone into a dedicated car camera.
 - [Privacy Policy](https://drivecam.store/en/privacy/): Complete DriveCam privacy policy and offline data handling.
 - [Terms & Conditions](https://drivecam.store/en/terms/): DriveCam terms and conditions of use.
 - [In-App Privacy & Data Summary](https://drivecam.store/en/legal/): Combined breakdown of local device permissions, privacy, and terms.

@@ -53,6 +53,10 @@ DriveCam actively samples device battery and CPU temperatures. If critical tempe
 - Homepage (Spanish): https://drivecam.store/es/
 - Feature Breakdown: https://drivecam.store/en/features/
 - User Setup & Mounting Guide: https://drivecam.store/en/guide/
+- Blog Hub: https://drivecam.store/en/blog/
+- Article - Accident Court Evidence: https://drivecam.store/en/blog/dashcam-accident-court-evidence/
+- Article - Hardware Comparison & Savings: https://drivecam.store/en/blog/best-dashcams-comparison-save-money/
+- Article - Old Phone Dashcam Setup: https://drivecam.store/en/blog/how-to-turn-old-phone-into-dashcam/
 - Privacy Policy: https://drivecam.store/en/privacy/
 - Terms & Conditions: https://drivecam.store/en/terms/
 - Combined Legal Summary: https://drivecam.store/en/legal/

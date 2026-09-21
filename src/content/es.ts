@@ -24,6 +24,11 @@ export const es: SiteContent = {
       description:
         'Guía práctica para montar una dashcam en el coche con tu móvil: soporte, ajustes de vídeo, batería y calor — y la normativa local antes de grabar.',
     },
+    blog: {
+      title: 'Blog de Dashcam y Guías para Coche — DriveCam',
+      description:
+        'Guías prácticas, comparativas de cámaras para coche, consejos legales sobre pruebas en accidentes y trucos para convertir tu móvil en dashcam.',
+    },
     privacy: {
       title: 'Política de Privacidad — DriveCam',
       description:
@@ -48,8 +53,9 @@ export const es: SiteContent = {
     homeLabel: 'Inicio de DriveCam',
     links: [
       { label: 'Cómo funciona', to: '/guide/' },
-      { label: 'Precios', to: '/pricing/' },
       { label: 'Funciones', to: '/features/' },
+      { label: 'Precios', to: '/pricing/' },
+      { label: 'Blog', to: '/blog/' },
       { label: 'Preguntas', to: '/#faq' },
       { label: 'Contacto', to: '/#contact' },
     ],
@@ -62,8 +68,9 @@ export const es: SiteContent = {
     links: [
       { label: 'Inicio', to: '/' },
       { label: 'Cómo configurarla', to: '/guide/' },
-      { label: 'Precios', to: '/pricing/' },
       { label: 'Funciones', to: '/features/' },
+      { label: 'Precios', to: '/pricing/' },
+      { label: 'Blog', to: '/blog/' },
       { label: 'Preguntas', to: '/#faq' },
       { label: 'Contacto', to: '/#contact' },
     ],
@@ -487,6 +494,322 @@ export const es: SiteContent = {
       'Las normas sobre dashcams cambian de un país a otro, y a veces incluso entre regiones. Antes de montar una cámara, consulta la normativa vigente que se aplica donde conduces. DriveCam es una ayuda, no asesoramiento legal.',
     ctaTitle: '¿Listo para probarla en tu propio parabrisas?',
     ctaBody: 'DriveCam se descarga gratis para iPhone y Android.',
+  },
+  blog: {
+    eyebrow: 'Conocimiento y Consejos',
+    title: 'Blog de Dashcam, Guías y Comparativas',
+    description:
+      'Guías detalladas sobre pruebas en accidentes, comparativas de hardware frente a smartphones y cómo convertir cualquier móvil en un testigo fiable.',
+    readArticle: 'Leer artículo',
+    backToBlog: 'Volver a todos los artículos',
+    publishedOn: 'Publicado',
+    estimatedRead: 'de lectura',
+    tableOfContentsTitle: 'Índice de contenidos',
+    faqTitle: 'Preguntas frecuentes',
+    ctaTitle: 'Convierte tu móvil en una dashcam hoy mismo',
+    ctaBody:
+      'Descarga DriveCam gratis en iPhone y Android. Grabación en bucle continua, telemetría GPS en tiempo real e informes de accidentes automáticos.',
+    ctaButton: 'Descargar DriveCam gratis',
+    articles: [
+      {
+        slug: 'dashcam-accident-court-evidence',
+        title: 'Cómo las Pruebas de Dashcam te Protegen en Juicios',
+        description:
+          'Descubre cómo los vídeos de dashcam demuestran tu inocencia en accidentes de tráfico, evitan fraudes y aceleran las indemnizaciones del seguro.',
+        date: '2026-09-18',
+        dateFormatted: '18 de septiembre de 2026',
+        readTime: '6 min de lectura',
+        category: 'Legal y Seguros',
+        keywords: [
+          'pruebas accidente dashcam',
+          'dashcam juicio inocente',
+          'demostrar inocencia accidente coche',
+          'parte amistoso video dashcam',
+        ],
+        sections: [
+          {
+            id: 'la-trampa-tu-palabra-contra-la-suya',
+            title: '1. La trampa del "tu palabra contra la mía" en accidentes',
+            paragraphs: [
+              'Casi el 50% de las colisiones en cruces urbanos y rotondas acaban con versiones contradictorias entre conductores. Sin testigos independientes, las aseguradoras suelen recurrir a la culpa compartida al 50%, lo que eleva tu póliza durante años sin haber tenido culpa.',
+              'Una cámara para coche cambia por completo la situación: actúa como un testigo neutral e incorruptible que registra la realidad con exactitud milimétrica.',
+            ],
+            callout: {
+              type: 'stat',
+              title: 'Dato de Aseguradoras',
+              text: 'Las reclamaciones con vídeo claro de dashcam se resuelven hasta 4 veces más rápido y reducen litigios judiciales en más de un 90%.',
+            },
+          },
+          {
+            id: 'validez-legal-en-juicio',
+            title: '2. ¿Son válidas las grabaciones de dashcam en un juicio?',
+            paragraphs: [
+              'Tanto en España como en la mayoría de tribunales europeos y latinoamericanos, las grabaciones de vídeo son plenamente admisibles como prueba documental en juicios civiles o penales, siempre que no hayan sido manipuladas.',
+              'Para que un juez o perito admita el vídeo sin reservas, debe cumplir tres requisitos esenciales: continuidad en la grabación, fecha y hora exactas, y posición geográfica verificable.',
+            ],
+            bullets: [
+              'Grabación continua en bucle: demuestra que no se recortó lo ocurrido instantes antes del impacto.',
+              'Marca de tiempo GPS al segundo: coincide exactamente con los ciclos de semáforos y llamadas de emergencia.',
+              'Velocidad real sobreimpresa: desmonta acusaciones falsas de exceso de velocidad o conducción temeraria.',
+            ],
+          },
+          {
+            id: 'accidentes-provocados-y-fraude',
+            title: '3. Evitar accidentes provocados y fraudes al seguro',
+            paragraphs: [
+              'Existen fraudes organizados donde vehículos provocan alcances intencionados ("frenazo sorpresa" o rotondas trampa). Por defecto, quien da por detrás suele presumirse culpable.',
+              'El vídeo de tu cámara para coche es la única prueba capaz de demostrar que el vehículo precedente frenó sin motivo o maniobró con mala fe para provocar la colisión.',
+            ],
+          },
+          {
+            id: 'actuacion-inmediata-tras-el-golpe',
+            title: '4. Qué hacer inmediatamente tras un accidente',
+            paragraphs: [
+              'Tras un golpe, los nervios dificultan recordar detalles clave. Estaciona en lugar seguro, asegura las grabaciones y no borres nada.',
+              'DriveCam cuenta con un generador automático de Informe de Incidente: con un solo toque, crea un PDF con la velocidad en el impacto, mapas y capturas del choque listo para la policía y tu aseguradora.',
+            ],
+            callout: {
+              type: 'tip',
+              title: 'Consejo Práctico',
+              text: 'Nunca entregues tu teléfono desbloqueado a terceros en el lugar del siniestro. Comparte el PDF o envía el vídeo por correo o mensajería.',
+            },
+          },
+        ],
+        faqs: [
+          {
+            question: '¿Pueden usar mi propia grabación en mi contra si tuve la culpa?',
+            answer:
+              'Sí. En un proceso judicial, cualquier prueba aportada puede ser valorada. Conduce siempre con prudencia y respetando los límites de velocidad.',
+          },
+          {
+            question: '¿Sube DriveCam mis vídeos a la nube o a internet?',
+            answer:
+              'No. DriveCam funciona 100% sin conexión. Todo el metraje y las coordenadas se quedan únicamente en la memoria privada de tu teléfono.',
+          },
+        ],
+        cta: {
+          title: 'Conduce protegido con un testigo a bordo',
+          body: 'Instala DriveCam gratis y lleva un registro exacto de cada trayecto con datos GPS y detección de incidentes.',
+          buttonText: 'Descargar DriveCam gratis',
+        },
+      },
+      {
+        slug: 'best-dashcams-comparison-save-money',
+        title: 'Comparativa de Dashcams: Garmin, Nextbase vs DriveCam',
+        description:
+          'Comparamos Garmin 67W, Nextbase 622GW y Vantrue N4 Pro con DriveCam. Descubre cómo ahorrar entre 150 € y 400 € usando tu móvil con mejor calidad.',
+        date: '2026-09-14',
+        dateFormatted: '14 de septiembre de 2026',
+        readTime: '8 min de lectura',
+        category: 'Comparativa',
+        keywords: [
+          'comparativa dashcam coche',
+          'mejores camaras para coche',
+          'ahorrar dinero dashcam',
+          'alternativa garmin dash cam',
+          'ahorrar con dashcam movil',
+        ],
+        sections: [
+          {
+            id: 'coste-real-dashcam-hardware',
+            title: '1. El coste oculto de comprar una cámara dedicada',
+            paragraphs: [
+              'Comprar una dashcam tradicional parece simple hasta sumar los extras: la cámara (140 € - 380 €), una tarjeta microSD de alta resistencia (30 € - 50 €), kit de cableado (25 €) y la instalación profesional para ocultar cables por el salpicadero.',
+              'El gasto total supera fácilmente los 250 € a 450 €. Mientras tanto, el smartphone que llevas en el bolsillo ya cuenta con una óptica y un sensor de imagen infinitamente más avanzados.',
+            ],
+          },
+          {
+            id: 'tabla-comparativa-mercado',
+            title: '2. Comparativa directa de modelos (2026)',
+            paragraphs: [
+              'Así compiten las dashcams más vendidas del mercado frente a la app DriveCam en tu smartphone:',
+            ],
+            table: {
+              headers: [
+                'Característica / Modelo',
+                'Garmin 67W',
+                'Nextbase 622GW',
+                'Vantrue N4 Pro',
+                'DriveCam (Móvil)',
+              ],
+              rows: [
+                ['Precio Inicial', '259 €', '299 €', '379 €', '0 € Gratis / 18,99 € PRO'],
+                [
+                  'Instalación requerida',
+                  'Cables y fusibles',
+                  'Soporte con cable',
+                  'Cableado triple',
+                  'Soporte ventosa/MagSafe (10 seg)',
+                ],
+                [
+                  'Almacenamiento',
+                  'MicroSD (desgaste rápido)',
+                  'MicroSD',
+                  'MicroSD',
+                  'Memoria ultrarrápida del móvil',
+                ],
+                [
+                  'Pantalla e Interfaz',
+                  '2.0" LCD diminuta',
+                  '3.0" Táctil',
+                  '3.19" No táctil',
+                  'Pantalla OLED / Retina de tu móvil',
+                ],
+                [
+                  'Velocidad de exportación',
+                  'Wi-Fi lento',
+                  'Wi-Fi / Bluetooth lento',
+                  'Wi-Fi 5GHz',
+                  'Instantánea (AirDrop / Compartir)',
+                ],
+                [
+                  'Comandos de voz',
+                  'Sí (básicos)',
+                  'Integración Alexa',
+                  'Sí (básicos)',
+                  'Comandos de voz 100% sin conexión',
+                ],
+                [
+                  'Suscripciones nube',
+                  'Garmin Vault (pago/mes)',
+                  'Emergency SOS (pago/mes)',
+                  'Sin nube',
+                  'Sin suscripciones (0 €/mes)',
+                ],
+              ],
+            },
+          },
+          {
+            id: 'superioridad-sensor-movil',
+            title: '3. Por qué las cámaras de móvil graban mejor',
+            paragraphs: [
+              'La mayoría de dashcams usan sensores económicos con lentes de plástico que queman las luces y desenfocan matrículas de noche. Los teléfonos modernos cuentan con lentes de cristal multicapa, procesadores neuronales y HDR en tiempo real.',
+              'DriveCam aprovecha toda la potencia del procesador de tu móvil para captar matrículas legibles bajo lluvia, noche o contraluces intensos.',
+            ],
+            callout: {
+              type: 'tip',
+              title: 'Cero fallos de tarjeta',
+              text: 'Las tarjetas microSD en parabrisas sufren constantes fallos por calor. El almacenamiento interno de tu móvil es inmune a estos problemas.',
+            },
+          },
+          {
+            id: 'balance-de-ahorro',
+            title: '4. Balance final: más de 200 € que se quedan en tu bolsillo',
+            paragraphs: [
+              'Utilizar DriveCam en tu teléfono habitual o en un móvil que ya no usas te ahorra más de 200 € sin renunciar a calidad, con revisión instantánea de vídeos en pantalla grande y sin suscripciones mensuales.',
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: '¿Se sobrecalienta el móvil grabando como dashcam?',
+            answer:
+              'DriveCam monitoriza la temperatura de la batería en tiempo real y permite atenuar o apagar la pantalla mientras graba en segundo plano, evitando calentamientos.',
+          },
+          {
+            question: '¿Consume datos móviles de mi tarifa?',
+            answer:
+              'No. DriveCam no consume datos. La velocidad y ubicación se obtienen por el chip GPS satelital sin necesidad de internet.',
+          },
+        ],
+        cta: {
+          title: 'Ahorra cientos de euros con la cámara de tu móvil',
+          body: '¿Por qué comprar aparatos caros cuando ya tienes una cámara excelente en el bolsillo? Prueba DriveCam gratis.',
+          buttonText: 'Empezar con DriveCam gratis',
+        },
+      },
+      {
+        slug: 'how-to-turn-old-phone-into-dashcam',
+        title: 'Cómo Convertir un Móvil Viejo en una Dashcam de Coche',
+        description:
+          'Guía paso a paso para transformar un iPhone o Android viejo en una cámara de coche permanente. Soporte, gestión del calor, cableado y ajustes.',
+        date: '2026-09-08',
+        dateFormatted: '8 de septiembre de 2026',
+        readTime: '7 min de lectura',
+        category: 'Guía Práctica',
+        keywords: [
+          'convertir movil viejo en dashcam',
+          'usar movil antiguo como camara coche',
+          'dashcam casera smartphone',
+          'camara coche movil',
+        ],
+        sections: [
+          {
+            id: 'por-que-reutilizar-tu-movil',
+            title: '1. Por qué ese móvil en el cajón es la mejor dashcam',
+            paragraphs: [
+              'Casi todos tenemos un iPhone o Android de hace unos años guardado en un cajón. Reutilizarlo como cámara fija en el parabrisas evita gastos innecesarios y deja tu teléfono principal libre para llamadas y navegación.',
+              'Con sensores de alta resolución y GPS integrado, un móvil de hace 3 o 4 años supera a cualquier cámara de coche barata de 50 €.',
+            ],
+          },
+          {
+            id: 'paso-1-preparacion-del-dispositivo',
+            title: '2. Paso 1: Limpieza y preparación del teléfono',
+            paragraphs: ['Antes de instalarlo en el vehículo, optimízalo para su nueva tarea:'],
+            bullets: [
+              'Restaura de fábrica el móvil: elimina apps innecesarias y procesos en segundo plano.',
+              'Activa el Modo Avión: ahorra batería y elimina conexiones no deseadas.',
+              'Instala DriveCam desde Google Play o App Store y concede permisos de cámara, micro y ubicación.',
+              'Configura el brillo automático o el modo pantalla apagada de DriveCam.',
+            ],
+          },
+          {
+            id: 'paso-2-soporte-y-cableado',
+            title: '3. Paso 2: Soporte y guiado de cables',
+            paragraphs: [
+              'Elige un soporte de ventosa firme o magnético MagSafe colocado junto al retrovisor interior.',
+              'Esta ubicación ofrece un campo de visión centrado del tráfico y no obstaculiza la visibilidad según la normativa.',
+              'Conecta un cable USB resistente y guíalo discretamente por el borde del techo y la goma de la puerta hasta la toma de 12V del mechero (mínimo 2.4A).',
+            ],
+          },
+          {
+            id: 'paso-3-cuidado-de-la-bateria-y-calor',
+            title: '4. Paso 3: Gestión del calor y batería',
+            paragraphs: [
+              'En verano, los parabrisas acumulan mucho calor. Sigue estas precauciones:',
+            ],
+            bullets: [
+              'Evita dejar el móvil al sol en días de mucho calor cuando el coche esté aparcado.',
+              'Orienta ligeramente una rejilla de aire acondicionado hacia el soporte durante la conducción.',
+              'DriveCam incluye protección térmica: si detecta temperaturas altas, pausa la grabación con seguridad para proteger la batería.',
+            ],
+            callout: {
+              type: 'warning',
+              title: 'Aviso de Verano',
+              text: 'Si aparcas a pleno sol en verano, guarda el móvil en la guantera para evitar temperaturas extremas.',
+            },
+          },
+          {
+            id: 'paso-4-ajustes-recomendados-drivecam',
+            title: '5. Paso 4: Ajustes recomendados en DriveCam',
+            paragraphs: ['Configura estos valores para que funcione de forma autónoma:'],
+            bullets: [
+              'Duración del bucle: 2 minutos (equilibrio perfecto entre tamaño de archivo y facilidad de exportación).',
+              'Almacenamiento: asigna entre 10 GB y 20 GB de memoria para guardar horas de recorrido.',
+              'Control por voz sin conexión: activa comandos como "Guardar vídeo" para no tocar la pantalla.',
+              'Grabación en segundo plano: permite seguir grabando con la pantalla apagada.',
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: '¿Necesita tarjeta SIM para registrar la velocidad?',
+            answer:
+              'No. La antena GPS de cualquier smartphone se conecta directamente a satélites sin necesidad de tarjeta SIM ni datos contratados.',
+          },
+          {
+            question: '¿Se descarga la batería del coche si lo dejo enchufado?',
+            answer:
+              'En casi todos los coches modernos, la toma de 12V se apaga al quitar la llave o cerrar el vehículo. Si tu toma tiene corriente permanente, desenchufa el cargador si vas a dejar el coche parado varios días.',
+          },
+        ],
+        cta: {
+          title: 'Dale una segunda vida a tu teléfono viejo',
+          body: 'Conviértelo en una dashcam completa en menos de 5 minutos. Gratis para iOS y Android.',
+          buttonText: 'Descargar DriveCam gratis',
+        },
+      },
+    ],
   },
   legal: {
     eyebrow: 'Legal',

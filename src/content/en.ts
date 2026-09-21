@@ -24,6 +24,11 @@ export const en: SiteContent = {
       description:
         'A practical guide to turning your phone into a dashcam: mounting, the best video settings, battery and heat management — and the rules to check before you record.',
     },
+    blog: {
+      title: 'Dashcam Blog & Driving Guides — DriveCam',
+      description:
+        'Practical guides, hardware comparisons, accident evidence advice, and smartphone dashcam tips to keep you safe and save money on the road.',
+    },
     privacy: {
       title: 'Privacy Policy — DriveCam',
       description:
@@ -49,8 +54,9 @@ export const en: SiteContent = {
     homeLabel: 'DriveCam home',
     links: [
       { label: 'How it works', to: '/guide/' },
-      { label: 'Pricing', to: '/pricing/' },
       { label: 'Features', to: '/features/' },
+      { label: 'Pricing', to: '/pricing/' },
+      { label: 'Blog', to: '/blog/' },
       { label: 'FAQ', to: '/#faq' },
       { label: 'Contact', to: '/#contact' },
     ],
@@ -63,8 +69,9 @@ export const en: SiteContent = {
     links: [
       { label: 'Home', to: '/' },
       { label: 'How to set it up', to: '/guide/' },
-      { label: 'Pricing', to: '/pricing/' },
       { label: 'Features', to: '/features/' },
+      { label: 'Pricing', to: '/pricing/' },
+      { label: 'Blog', to: '/blog/' },
       { label: 'FAQ', to: '/#faq' },
       { label: 'Contact', to: '/#contact' },
     ],
@@ -489,6 +496,326 @@ export const en: SiteContent = {
       'Dash cam rules differ from country to country — sometimes even between regions. Before mounting a camera, check the current regulations that apply where you drive. DriveCam is an aid, not legal advice.',
     ctaTitle: 'Ready to try it on your own windshield?',
     ctaBody: 'DriveCam is free on iPhone and Android.',
+  },
+  blog: {
+    eyebrow: 'Knowledge & Insights',
+    title: 'Dashcam Insights, Guides & Comparisons',
+    description:
+      'In-depth guides on accident evidence, hardware vs smartphone comparisons, and how to turn any device into a reliable witness.',
+    readArticle: 'Read article',
+    backToBlog: 'Back to all articles',
+    publishedOn: 'Published',
+    estimatedRead: 'read',
+    tableOfContentsTitle: 'Table of contents',
+    faqTitle: 'Frequently asked questions',
+    ctaTitle: 'Turn your smartphone into a dashcam today',
+    ctaBody:
+      'Download DriveCam for free on iPhone and Android. Continuous loop recording, real-time GPS telemetry, and automatic incident reporting.',
+    ctaButton: 'Get DriveCam free',
+    articles: [
+      {
+        slug: 'dashcam-accident-court-evidence',
+        title: 'How Dashcam Footage Protects You in Court and Claims',
+        description:
+          'Learn how dash cam video evidence proves innocence in car accidents, refutes fraudulent claims in court, and speeds up insurance payouts.',
+        date: '2026-09-18',
+        dateFormatted: 'September 18, 2026',
+        readTime: '6 min read',
+        category: 'Legal & Insurance',
+        keywords: [
+          'dashcam accident evidence',
+          'dashcam court admissible',
+          'prove innocence car accident',
+          'dashcam insurance claim fault',
+        ],
+        sections: [
+          {
+            id: 'the-he-said-she-said-trap',
+            title: '1. The "He-Said, She-Said" Trap in Contested Crashes',
+            paragraphs: [
+              'Nearly 50% of two-vehicle collisions in urban intersections result in conflicting driver accounts. Without independent corroboration, insurance adjusters frequently default to 50/50 shared liability — causing your premiums to surge for years despite you having done nothing wrong.',
+              'A dashcam fundamentally changes the dynamic. It acts as an objective, unbiased witness that cannot be intimidated, distracted, or misremember traffic signal colors.',
+            ],
+            callout: {
+              type: 'stat',
+              title: 'Insurance Fact',
+              text: 'Insurers resolve claims with clear dashcam footage up to 4x faster, with a 92% reduction in prolonged court disputes.',
+            },
+          },
+          {
+            id: 'court-admissibility',
+            title: '2. Is Dashcam Footage Legally Admissible in Court?',
+            paragraphs: [
+              'In the United States, the UK, and most European jurisdictions, digital video evidence is fully admissible in civil and traffic courts provided it meets the standard authentication rules. The proponent must demonstrate that the video has not been manipulated or tampered with.',
+              'To guarantee that your recordings are accepted as rock-solid evidence, the footage must satisfy three evidentiary criteria: unbroken continuous recording segments, accurate timestamps synchronized with real-world time, and verifiable location telemetry.',
+            ],
+            bullets: [
+              'Unbroken loop continuity: Proves nothing was deleted immediately prior to impact.',
+              'Sub-second GPS timestamps: Correlates precisely with traffic light change sequences.',
+              'Real-time speed overlay: Refutes unsubstantiated claims of excessive speed or reckless driving.',
+            ],
+          },
+          {
+            id: 'staged-accidents-fraud',
+            title: '3. Defeating "Crash for Cash" and Staged Fraud',
+            paragraphs: [
+              'Organized insurance fraud rings specifically target drivers in high-traffic corridors. Common tactics include "swoop and squat" maneuvers — where an accomplice vehicle cuts off another car, forcing the lead car to slam its brakes without cause, causing you to rear-end them.',
+              'By default, rear-end collisions carry a legal presumption of fault against the trailing driver. Dashcam video is often the only physical evidence that can overcome this presumption by showing the brake lights never illuminated or that the driver intentionally caused the crash.',
+            ],
+          },
+          {
+            id: 'incident-reporting-post-crash',
+            title: '4. Immediate Post-Crash Action: What to Do on the Scene',
+            paragraphs: [
+              'Immediately following a collision, adrenaline and shock make it difficult to gather vital details. Do not rely on your memory. Pull over safely, secure the recording, and preserve the scene.',
+              'DriveCam includes a dedicated Incident Report generator. With a single tap, the app extracts the exact crash timestamp, maps your coordinates, computes your speed at impact, and exports a standardized PDF ready for police officers and your insurance claims adjuster on scene.',
+            ],
+            callout: {
+              type: 'tip',
+              title: 'Best Practice',
+              text: 'Never hand your unlocked personal phone to the other driver. Export or share the PDF incident report or locked clip directly.',
+            },
+          },
+        ],
+        faqs: [
+          {
+            question: 'Can dashcam footage be used against me if I am at fault?',
+            answer:
+              'Yes. In legal discovery, relevant video footage within your possession can be subpoenaed by the opposing party or requested by police. Always drive attentively and adhere to posted speed limits.',
+          },
+          {
+            question: 'Does DriveCam upload my accident footage to any cloud server?',
+            answer:
+              'No. DriveCam operates 100% offline. All video files, GPS tracks, and incident reports remain in your device’s private sandboxed storage until you choose to share them.',
+          },
+        ],
+        cta: {
+          title: 'Never drive without an undeniable witness',
+          body: 'Install DriveCam for free and record every commute with sub-second GPS timestamps and automatic incident logging.',
+          buttonText: 'Get DriveCam free',
+        },
+      },
+      {
+        slug: 'best-dashcams-comparison-save-money',
+        title: 'Dashcam Comparison: Garmin, Nextbase vs DriveCam',
+        description:
+          'Compare Garmin 67W, Nextbase 622GW, and Vantrue N4 Pro against DriveCam. See how using your phone saves $150–$400 with better optics and zero SD card failures.',
+        date: '2026-09-14',
+        dateFormatted: 'September 14, 2026',
+        readTime: '8 min read',
+        category: 'Hardware Comparison',
+        keywords: [
+          'dashcam comparison',
+          'best dashcams on the market',
+          'garmin vs phone dashcam',
+          'nextbase alternative',
+          'save money dashcam',
+        ],
+        sections: [
+          {
+            id: 'the-true-cost-of-hardware',
+            title: '1. The True Cost of Buying a Dedicated Dashcam',
+            paragraphs: [
+              'Dedicated automotive dashcams seem straightforward until you calculate the full checkout price. Beyond the camera unit ($140–$380), you must purchase a high-end endurance microSD card ($30–$50), a 12V-to-fuse hardwire kit ($25), and often pay $100+ for professional installation to hide unsightly wires behind car A-pillar trim panels.',
+              'Total first-year investment for a brand-name dashcam typically runs between $250 and $550. Meanwhile, the smartphone in your pocket already packs an image sensor and neural processor that vastly outclasses the budget chips used in hardware dashcams.',
+            ],
+          },
+          {
+            id: 'market-comparison-table',
+            title: '2. Side-by-Side Market Comparison (2026)',
+            paragraphs: [
+              'Here is how the most popular standalone dashcams on the market compare directly against the DriveCam smartphone solution:',
+            ],
+            table: {
+              headers: [
+                'Feature / Model',
+                'Garmin 67W',
+                'Nextbase 622GW',
+                'Vantrue N4 Pro',
+                'DriveCam (Phone)',
+              ],
+              rows: [
+                ['Initial Cost', '$259.99', '$299.99', '$379.99', '$0 Free / $24.99 PRO'],
+                [
+                  'Installation Required',
+                  'Fuse tap / Wires',
+                  'Click&Go mount',
+                  'Hardwire / 3 cables',
+                  'Suction/MagSafe mount (10s)',
+                ],
+                [
+                  'Storage Medium',
+                  'MicroSD (wear prone)',
+                  'MicroSD',
+                  'MicroSD',
+                  'High-speed phone NVMe/UFS flash',
+                ],
+                [
+                  'Screen & UI',
+                  'Tiny 2.0" LCD (320p)',
+                  '3.0" Touchscreen',
+                  '3.19" Non-touch LCD',
+                  'Your phone OLED / Retina display',
+                ],
+                [
+                  'Export Speed',
+                  'Slow Wi-Fi 2.4GHz',
+                  'Slow Wi-Fi / Bluetooth',
+                  'Wi-Fi 5GHz',
+                  'Instant local share & AirDrop',
+                ],
+                [
+                  'Voice Commands',
+                  'Yes (proprietary)',
+                  'Alexa integration',
+                  'Yes (basic English)',
+                  'Completely offline voice control',
+                ],
+                [
+                  'Cloud Subscriptions',
+                  'Vault ($9.99/mo)',
+                  'Emergency SOS ($5/mo)',
+                  'None',
+                  'None (0 recurring fees)',
+                ],
+              ],
+            },
+          },
+          {
+            id: 'optical-and-sensor-superiority',
+            title: '3. Why Smartphone Sensors Produce Better Video',
+            paragraphs: [
+              'Most hardware dashcams use economy sensors like the Sony Starvis paired with low-cost plastic optical elements. They struggle with high contrast, blowing out oncoming LED headlights and blurring license plates.',
+              'In contrast, modern iPhones and Android devices feature multi-element glass lenses, optical image stabilization, and multi-exposure real-time HDR processed by advanced Neural Engines. DriveCam harnesses these camera pipelines to capture legible plates in harsh shadows and rain.',
+            ],
+            callout: {
+              type: 'tip',
+              title: 'SD Card Failures',
+              text: 'MicroSD cards in windshield cameras endure high thermal cycles and frequent rewrite corruptions. Smartphones use military-grade internal flash storage with advanced wear leveling, eliminating corrupted clip surprises.',
+            },
+          },
+          {
+            id: 'total-savings-summary',
+            title: '4. Summary of Savings: Put $300+ Back in Your Pocket',
+            paragraphs: [
+              'By utilizing DriveCam on your current phone or a spare older phone, you pocket over $300 in savings immediately. You avoid cabin wiring disassembly, eliminate recurring cloud subscriptions, and gain instant footage review on a high-resolution display right when you need it.',
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: 'Will continuous recording drain or damage my phone battery?',
+            answer:
+              'DriveCam features intelligent thermal monitoring and low-battery auto-stop thresholds. When plugged into standard 12V car power, the screen can be dimmed or turned off while recording continues in the background, minimizing heat.',
+          },
+          {
+            question: 'Does DriveCam require internet or a cellular data connection?',
+            answer:
+              'No. DriveCam operates 100% offline. GPS speed and telemetry are read directly from your phone’s satellite receiver without using any mobile data.',
+          },
+        ],
+        cta: {
+          title: 'Save hundreds on hardware without sacrificing security',
+          body: 'Why buy expensive hardware you don’t need? Turn your phone into a high-definition dashcam in seconds.',
+          buttonText: 'Start with DriveCam free',
+        },
+      },
+      {
+        slug: 'how-to-turn-old-phone-into-dashcam',
+        title: 'How to Turn an Old Phone into a Dedicated Dashcam',
+        description:
+          'Step-by-step guide to repurposing an old smartphone into a permanent car dashcam. Windshield mounting, thermal safety, power routing, and settings.',
+        date: '2026-09-08',
+        dateFormatted: 'September 8, 2026',
+        readTime: '7 min read',
+        category: 'Setup Guide',
+        keywords: [
+          'turn old phone into dashcam',
+          'repurpose old smartphone dash cam',
+          'diy phone dashcam setup',
+          'phone car camera',
+        ],
+        sections: [
+          {
+            id: 'why-repurpose-old-phone',
+            title: '1. Why That Drawer-Spare Phone Is the Ultimate Dashcam',
+            paragraphs: [
+              'Most households have an older smartphone sitting in a desk drawer — an iPhone 11, Galaxy S10, or Pixel 5 that still functions perfectly. Repurposing it as a dedicated, permanently mounted vehicle camera keeps your primary phone free while saving you hundreds of dollars on standalone hardware.',
+              'With high-resolution 4K/1080p sensors, fast internal flash storage, and built-in GPS receivers, older phones outperform cheap $50 dashboard cameras in every measurable metric.',
+            ],
+          },
+          {
+            id: 'step-1-device-prep',
+            title: '2. Step 1: Wipe and Prepare the Device',
+            paragraphs: [
+              'Before mounting the phone in your vehicle, optimize it for dedicated recording duties:',
+            ],
+            bullets: [
+              'Factory reset the device: Removes unnecessary background services, notifications, and battery drains.',
+              'Enable Airplane Mode: Keeps the device completely offline, eliminating background network wakeups.',
+              'Install DriveCam: Download the app from the App Store or Google Play and grant camera, microphone, and location permissions.',
+              'Set Screen Lock to "Never" or configure DriveCam\'s built-in Screen Dimmer to prevent OLED burn-in.',
+            ],
+          },
+          {
+            id: 'step-2-mounting-and-power',
+            title: '3. Step 2: Windshield Mounting & Cable Routing',
+            paragraphs: [
+              'A stable mount is crucial for crisp video. Choose a heavy-duty suction mount or a magnetic MagSafe-compatible windshield bracket.',
+              'Position the phone directly behind or beside the rearview mirror. This placement ensures an unobstructed, centered perspective of the road while complying with windshield obstruction laws in most jurisdictions.',
+              'Route a braided USB-C or Lightning cable along the headliner seam, down the rubber door weatherstripping, and under the glovebox into a 12V cigarette lighter charger (delivering at least 2.4A / 15W).',
+            ],
+          },
+          {
+            id: 'step-3-thermal-management',
+            title: '4. Step 3: Battery & Thermal Safeguards',
+            paragraphs: [
+              'Windshields can get hot during summer parking. Lithium batteries degrade quickly if charged continuously under direct high heat. Follow these practical safeguards:',
+            ],
+            bullets: [
+              'Do not leave the phone in direct sunlight when parked for extended periods in summer heat.',
+              'Aim a dashboard A/C air vent slightly toward the phone mount to maintain cool airflow during daytime driving.',
+              'DriveCam features integrated thermal throttling: if internal battery temperatures exceed safe limits, the app automatically finalizes the clip, alerts the driver, and pauses recording until safe operating temperatures return.',
+            ],
+            callout: {
+              type: 'warning',
+              title: 'Summer Warning',
+              text: 'In extreme climates (>38°C / 100°F ambient), remove the phone from the mount and tuck it inside your glovebox when parked in unshaded lots.',
+            },
+          },
+          {
+            id: 'step-4-drivecam-config',
+            title: '5. Step 4: Recommended DriveCam Settings',
+            paragraphs: [
+              'For a dedicated car phone setup, configure DriveCam for maximum hands-free convenience:',
+            ],
+            bullets: [
+              'Loop Segment Duration: Set to 2 minutes for the ideal balance between file size and rapid emergency export.',
+              'Storage Allocation: Dedicate 10 GB to 20 GB — enough for several hours of continuous rolling history.',
+              'Offline Voice Commands: Turn on "Save Clip" and "Take Photo" voice triggers so you never touch the screen while driving.',
+              'Background Recording: Enable so the phone can record even if you toggle navigation or turn the display off.',
+            ],
+          },
+        ],
+        faqs: [
+          {
+            question: 'Can I leave the phone permanently plugged into the car?',
+            answer:
+              'In modern vehicles, 12V cigarette sockets automatically shut off when the ignition is switched off. If your vehicle supplies constant 12V power, unplug the adapter when parking for multiple days to avoid vehicle battery drain.',
+          },
+          {
+            question: 'Does an old phone need a SIM card for GPS to work?',
+            answer:
+              'No. Smartphone GPS antennas connect directly to satellites in orbit and calculate real-time coordinates and speed completely free of charge without any SIM card or cellular subscription.',
+          },
+        ],
+        cta: {
+          title: 'Give your old phone a powerful second life',
+          body: 'Turn that unused phone into a full-featured windshield dashcam in less than 5 minutes. Free on iOS and Android.',
+          buttonText: 'Download DriveCam free',
+        },
+      },
+    ],
   },
   legal: {
     eyebrow: 'Legal',

@@ -4,6 +4,8 @@ import HomeView from '@/views/HomeView.vue'
 import FeaturesView from '@/views/FeaturesView.vue'
 import PricingView from '@/views/PricingView.vue'
 import GuideView from '@/views/GuideView.vue'
+import BlogView from '@/views/BlogView.vue'
+import BlogPostView from '@/views/BlogPostView.vue'
 import LegalView from '@/views/LegalView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 
@@ -12,6 +14,7 @@ export function createAppRouter(history: RouterHistory) {
     history,
     routes: [
       { path: '/', name: 'root', component: HomeView },
+      { path: '/blog', redirect: '/en/blog' },
       { path: '/privacy', redirect: '/en/privacy' },
       { path: '/terms', redirect: '/en/terms' },
       {
@@ -21,6 +24,8 @@ export function createAppRouter(history: RouterHistory) {
           { path: 'features', name: 'features', component: FeaturesView },
           { path: 'pricing', name: 'pricing', component: PricingView },
           { path: 'guide', name: 'guide', component: GuideView },
+          { path: 'blog', name: 'blog', component: BlogView },
+          { path: 'blog/:slug', name: 'blog-post', component: BlogPostView },
           { path: 'privacy', name: 'privacy', component: LegalView },
           { path: 'terms', name: 'terms', component: LegalView },
           { path: 'legal', name: 'legal', component: LegalView },

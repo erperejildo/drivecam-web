@@ -19,6 +19,7 @@ export const SEO_ROUTES: SeoRouteKey[] = [
   'features',
   'pricing',
   'guide',
+  'blog',
   'privacy',
   'terms',
   'legal',
@@ -29,6 +30,7 @@ const SEGMENTS: Record<SeoRouteKey, string> = {
   features: 'features',
   pricing: 'pricing',
   guide: 'guide',
+  blog: 'blog',
   privacy: 'privacy',
   terms: 'terms',
   legal: 'legal',
@@ -58,6 +60,7 @@ export interface PageSeo {
   canonical: string
   alternates: AlternateLink[]
   image: string
+  blogSlug?: string
 }
 
 export function hreflangAlternates(routeKey: SeoRouteKey): AlternateLink[] {
@@ -105,6 +108,26 @@ export function getSeoPages(): PageSeo[] {
         canonical,
         alternates: hreflangAlternates(routeKey),
         image: OG_IMAGE,
+      })
+    }
+
+    for (const article of content[locale].blog.articles) {
+      const path = `/${locale}/blog/${article.slug}`
+      const canonical = canonicalUrl(path)
+      pages.push({
+        path,
+        locale,
+        routeKey: 'blog',
+        title: `${article.title} — DriveCam`,
+        description: article.description,
+        canonical,
+        alternates: [
+          { hreflang: 'en', href: canonicalUrl(`/en/blog/${article.slug}`) },
+          { hreflang: 'es', href: canonicalUrl(`/es/blog/${article.slug}`) },
+          { hreflang: 'x-default', href: canonicalUrl(`/en/blog/${article.slug}`) },
+        ],
+        image: OG_IMAGE,
+        blogSlug: article.slug,
       })
     }
   }
@@ -160,10 +183,17 @@ function webSite(seo: PageSeo): Record<string, unknown> {
 }
 
 function breadcrumb(seo: PageSeo): Record<string, unknown> {
-  const items = [
-    { name: 'DriveCam', url: canonicalUrl('') },
-    { name: content[seo.locale].meta[seo.routeKey].title, url: seo.canonical },
-  ]
+  const site = content[seo.locale]
+  const items: { name: string; url: string }[] = [{ name: 'DriveCam', url: canonicalUrl('') }]
+  if (seo.blogSlug) {
+    const article = site.blog.articles.find((a) => a.slug === seo.blogSlug)
+    items.push(
+      { name: site.blog.title, url: canonicalUrl(`/${seo.locale}/blog`) },
+      { name: article ? article.title : seo.title, url: seo.canonical },
+    )
+  } else {
+    items.push({ name: site.meta[seo.routeKey].title, url: seo.canonical })
+  }
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -173,6 +203,64 @@ function breadcrumb(seo: PageSeo): Record<string, unknown> {
       name: item.name,
       item: item.url,
     })),
+  }
+}
+
+function blogCollection(seo: PageSeo, site: (typeof content)[SiteLocale]): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: site.blog.title,
+    description: site.blog.description,
+    url: seo.canonical,
+    publisher: {
+      '@type': 'Organization',
+      name: 'DriveCam',
+      url: SITE_URL,
+    },
+    blogPost: site.blog.articles.map((article) => ({
+      '@type': 'BlogPosting',
+      headline: article.title,
+      description: article.description,
+      datePublished: article.date,
+      url: canonicalUrl(`/${seo.locale}/blog/${article.slug}`),
+    })),
+  }
+}
+
+function blogPosting(
+  seo: PageSeo,
+  site: (typeof content)[SiteLocale],
+  slug: string,
+): Record<string, unknown> | undefined {
+  const article = site.blog.articles.find((a) => a.slug === slug)
+  if (!article) return undefined
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.description,
+    datePublished: article.date,
+    dateModified: article.date,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': seo.canonical,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'DriveCam',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'DriveCam',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/img/app-icon.png`,
+      },
+    },
+    image: OG_IMAGE,
+    keywords: article.keywords.join(', '),
   }
 }
 
@@ -236,6 +324,18 @@ export function getJsonLd(path: string): Record<string, unknown>[] {
   }
   if (seo.routeKey === 'pricing') {
     items.push(faqPage(site.pricing.faq))
+  }
+  if (seo.routeKey === 'blog') {
+    if (seo.blogSlug) {
+      const article = site.blog.articles.find((a) => a.slug === seo.blogSlug)
+      const postSchema = blogPosting(seo, site, seo.blogSlug)
+      if (postSchema) items.push(postSchema)
+      if (article?.faqs && article.faqs.length > 0) {
+        items.push(faqPage(article.faqs))
+      }
+    } else {
+      items.push(blogCollection(seo, site))
+    }
   }
   return items
 }

@@ -1,7 +1,7 @@
 export type SiteLocale = 'en' | 'es'
 
 export type RouteKey =
-  'home' | 'features' | 'pricing' | 'guide' | 'privacy' | 'terms' | 'legal' | 'notFound'
+  'home' | 'features' | 'pricing' | 'guide' | 'blog' | 'privacy' | 'terms' | 'legal' | 'notFound'
 
 export type IconName =
   | 'arrow'
@@ -89,6 +89,60 @@ export interface LegalSection {
   id: string
   title: string
   paragraphs: string[]
+}
+
+export interface BlogPostTable {
+  headers: string[]
+  rows: string[][]
+}
+
+export interface BlogPostCallout {
+  type: 'tip' | 'warning' | 'stat'
+  title: string
+  text: string
+}
+
+export interface BlogPostSection {
+  id: string
+  title: string
+  paragraphs: string[]
+  bullets?: string[]
+  table?: BlogPostTable
+  callout?: BlogPostCallout
+}
+
+export interface BlogPost {
+  slug: string
+  title: string
+  description: string
+  date: string
+  dateFormatted: string
+  readTime: string
+  category: string
+  keywords: string[]
+  sections: BlogPostSection[]
+  faqs?: FaqItem[]
+  cta: {
+    title: string
+    body: string
+    buttonText: string
+  }
+}
+
+export interface BlogContent {
+  eyebrow: string
+  title: string
+  description: string
+  readArticle: string
+  backToBlog: string
+  publishedOn: string
+  estimatedRead: string
+  tableOfContentsTitle: string
+  faqTitle: string
+  ctaTitle: string
+  ctaBody: string
+  ctaButton: string
+  articles: BlogPost[]
 }
 
 export interface ContactContent {
@@ -212,6 +266,7 @@ export interface SiteContent {
     ctaTitle: string
     ctaBody: string
   }
+  blog: BlogContent
   legal: {
     eyebrow: string
     title: string
