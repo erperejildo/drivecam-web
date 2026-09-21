@@ -30,7 +30,8 @@ export function pagePath(locale: SiteLocale, routeKey: SeoRouteKey): string {
 }
 
 export function canonicalUrl(path: string): string {
-  return `${SITE_URL}${path}/`
+  const clean = path.replace(/^\/+|\/+$/g, '')
+  return clean ? `${SITE_URL}/${clean}/` : `${SITE_URL}/`
 }
 
 export interface AlternateLink {
@@ -50,11 +51,31 @@ export interface PageSeo {
 }
 
 export function hreflangAlternates(routeKey: SeoRouteKey): AlternateLink[] {
+  if (routeKey === 'home') {
+    return [
+      { hreflang: 'en', href: canonicalUrl('') },
+      { hreflang: 'es', href: canonicalUrl(pagePath('es', 'home')) },
+      { hreflang: 'x-default', href: canonicalUrl('') },
+    ]
+  }
   return [
     { hreflang: 'en', href: canonicalUrl(pagePath('en', routeKey)) },
     { hreflang: 'es', href: canonicalUrl(pagePath('es', routeKey)) },
     { hreflang: 'x-default', href: canonicalUrl(pagePath('en', routeKey)) },
   ]
+}
+
+export function getRootSeo(): PageSeo {
+  return {
+    path: '/',
+    locale: 'en',
+    routeKey: 'home',
+    title: content.en.meta.home.title,
+    description: content.en.meta.home.description,
+    canonical: canonicalUrl(''),
+    alternates: hreflangAlternates('home'),
+    image: OG_IMAGE,
+  }
 }
 
 export function getSeoPages(): PageSeo[] {
@@ -63,13 +84,15 @@ export function getSeoPages(): PageSeo[] {
     for (const routeKey of SEO_ROUTES) {
       const path = pagePath(locale, routeKey)
       const meta = content[locale].meta[routeKey]
+      const canonical =
+        locale === 'en' && routeKey === 'home' ? canonicalUrl('') : canonicalUrl(path)
       pages.push({
         path,
         locale,
         routeKey,
         title: meta.title,
         description: meta.description,
-        canonical: canonicalUrl(path),
+        canonical,
         alternates: hreflangAlternates(routeKey),
         image: OG_IMAGE,
       })
@@ -80,12 +103,55 @@ export function getSeoPages(): PageSeo[] {
 
 export function getSeoForPath(path: string): PageSeo | undefined {
   const normalized = path.replace(/\/+$/, '') || '/'
+  if (normalized === '/') {
+    return getRootSeo()
+  }
   return getSeoPages().find((page) => page.path === normalized)
+}
+
+function organization(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'DriveCam',
+    url: SITE_URL,
+    logo: `${SITE_URL}/img/app-icon.png`,
+    description:
+      'DriveCam turns your smartphone into an offline, privacy-first dash cam and car camera recorder.',
+    email: 'drodriguez.apps@gmail.com',
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Axis Labs',
+      url: 'https://axislabs.eu',
+    },
+    sameAs: ['https://github.com/erperejildo/drivecam-web', 'https://axislabs.eu'],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'drodriguez.apps@gmail.com',
+      contactType: 'customer support',
+    },
+  }
+}
+
+function webSite(seo: PageSeo): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'DriveCam',
+    url: SITE_URL,
+    description: seo.description,
+    inLanguage: ['en', 'es'],
+    publisher: {
+      '@type': 'Organization',
+      name: 'Axis Labs',
+      url: 'https://axislabs.eu',
+    },
+  }
 }
 
 function breadcrumb(seo: PageSeo): Record<string, unknown> {
   const items = [
-    { name: 'DriveCam', url: canonicalUrl(pagePath(seo.locale, 'home')) },
+    { name: 'DriveCam', url: canonicalUrl('') },
     { name: content[seo.locale].meta[seo.routeKey].title, url: seo.canonical },
   ]
   return {
@@ -112,6 +178,26 @@ function faqPage(items: { question: string; answer: string }[]): Record<string, 
   }
 }
 
+function howTo(seo: PageSeo, site: (typeof content)[SiteLocale]): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: site.guide.title,
+    description: site.guide.description,
+    image: OG_IMAGE,
+    step: site.guide.sections.map((section, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: section.title,
+      text: section.paragraphs.join(' '),
+      itemListElement: section.bullets.map((b) => ({
+        '@type': 'HowToDirection',
+        text: b,
+      })),
+    })),
+  }
+}
+
 function softwareApplication(seo: PageSeo): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
@@ -133,7 +219,10 @@ export function getJsonLd(path: string): Record<string, unknown>[] {
   const items: Record<string, unknown>[] = []
   if (seo.routeKey !== 'home') items.push(breadcrumb(seo))
   if (seo.routeKey === 'home') {
-    items.push(softwareApplication(seo), faqPage(site.faq.items))
+    items.push(organization(), webSite(seo), softwareApplication(seo), faqPage(site.faq.items))
+  }
+  if (seo.routeKey === 'guide') {
+    items.push(howTo(seo, site))
   }
   if (seo.routeKey === 'pricing') {
     items.push(faqPage(site.pricing.faq))
@@ -163,6 +252,10 @@ export function renderSeoHead(seo: PageSeo): string {
     `<meta property="og:description" content="${escapeHtml(seo.description)}" />`,
     `<meta property="og:url" content="${seo.canonical}" />`,
     `<meta property="og:image" content="${seo.image}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:type" content="image/png" />`,
+    `<meta property="og:image:alt" content="${escapeHtml(seo.title)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${escapeHtml(seo.title)}" />`,
     `<meta name="twitter:description" content="${escapeHtml(seo.description)}" />`,

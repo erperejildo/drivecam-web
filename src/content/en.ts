@@ -5,24 +5,24 @@ export const en: SiteContent = {
   localeName: 'English',
   meta: {
     home: {
-      title: 'DriveCam',
+      title: 'Dashcam App for iPhone & Android — Free Dash Cam | DriveCam',
       description:
-        'DriveCam turns your phone into a powerful dash cam. Loop recording with GPS, private storage, voice control and incident reports. Free on iPhone and Android.',
+        'DriveCam is the dash cam app and car camera recorder that turns your phone into a witness. Loop recording with GPS, private storage and voice control. Free on iPhone and Android.',
     },
     features: {
-      title: 'Features — Loop Recording, GPS & Voice Control | DriveCam',
+      title: 'Dashcam Features — Loop Recording, GPS & Voice Control | DriveCam',
       description:
-        'Every DriveCam feature: loop recording, GPS speed stamp, offline voice control, night mode, heat protection, incident reports and driving statistics.',
+        'All the features of a dashcam in one car camera app: loop recording, GPS speed stamp, offline voice control, night mode, heat protection and driving stats.',
     },
     pricing: {
-      title: 'Pricing — Free vs PRO Lifetime | DriveCam',
+      title: 'Dashcam Pro Pricing — Free Plan vs Lifetime PRO | DriveCam',
       description:
-        'Start free or unlock PRO forever with a one-time purchase. High and maximum video quality, storage control, live streaming and driving stats. No account needed.',
+        'Start free or unlock dashcam PRO forever with a one-time purchase. Maximum video quality, storage control, live streaming and driving stats. No account.',
     },
     guide: {
       title: 'How to Turn Your Phone Into a Dashcam — Guide | DriveCam',
       description:
-        'A practical guide to setting up a phone dashcam: mounting, video settings, battery and heat management — and the local rules to check before you record.',
+        'A practical guide to turning your phone into a dashcam: mounting, the best video settings, battery and heat management — and the rules to check before you record.',
     },
     legal: {
       title: 'Privacy Policy & Terms — DriveCam',

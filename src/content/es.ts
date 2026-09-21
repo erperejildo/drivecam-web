@@ -5,24 +5,24 @@ export const es: SiteContent = {
   localeName: 'Español',
   meta: {
     home: {
-      title: 'DriveCam',
+      title: 'Dashcam App para Coche — Cámara para Coche Gratis | DriveCam',
       description:
-        'DriveCam convierte tu móvil en una dashcam para coche. Grabación en bucle con GPS, almacenamiento privado, control por voz e informes de incidente. Gratis en iPhone y Android.',
+        'DriveCam es la app dashcam para coche que convierte tu móvil en una cámara para coche fiable. Grabación en bucle con GPS, modo privado y voz. Gratis en iPhone y Android.',
     },
     features: {
-      title: 'Funciones — Grabación en Bucle, GPS y Voz | DriveCam',
+      title: 'Funciones de Dashcam — Grabación en Bucle, GPS y Voz | DriveCam',
       description:
-        'Todas las funciones de DriveCam: grabación en bucle, datos GPS, control por voz sin conexión, modo noche, protección térmica, informes de incidente y estadísticas.',
+        'Todas las funciones de tu dash camera: grabación en bucle, datos GPS, control por voz sin conexión, modo noche, protección térmica e informes de incidente.',
     },
     pricing: {
-      title: 'Precios — Gratis vs PRO de por Vida | DriveCam',
+      title: 'Precios Dashcam — Gratis vs PRO de por Vida | DriveCam',
       description:
-        'Empieza gratis o desbloquea PRO para siempre con un pago único. Máxima calidad de vídeo, control de almacenamiento, streaming en vivo y estadísticas. Sin cuenta.',
+        'Empieza con la dashcam gratis o desbloquea PRO para siempre con un pago único. Máxima calidad de vídeo, almacenamiento, streaming en vivo y estadísticas. Sin cuenta.',
     },
     guide: {
-      title: 'Cómo Convertir tu Móvil en Dashcam — Guía | DriveCam',
+      title: 'Cómo Convertir tu Móvil en una Dashcam — Guía | DriveCam',
       description:
-        'Guía práctica para montar una dashcam con el móvil: soporte, ajustes de vídeo, batería y calor — y la normativa local que debes consultar antes de grabar.',
+        'Guía práctica para montar una dashcam en el coche con tu móvil: soporte, ajustes de vídeo, batería y calor — y la normativa local antes de grabar.',
     },
     legal: {
       title: 'Privacidad y Términos — DriveCam',

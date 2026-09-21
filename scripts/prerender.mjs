@@ -7,6 +7,7 @@ import {
   BASE_PATH,
   SITE_URL,
   createDriveCamApp,
+  getRootSeo,
   getSeoPages,
   getSeoForPath,
   renderSeoHead,
@@ -47,37 +48,31 @@ notFound = notFound.replace(
 await write(distDir, '404.html', notFound)
 console.log('prerendered 404')
 
-const redirect = `<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>DriveCam — Dash Cam App</title>
-    <meta name="robots" content="noindex" />
+const rootSeo = getRootSeo()
+let rootHtml = await renderPage('/')
+const spanishDetectScript = `
     <script>
       ;(function () {
-        var base = '${BASE_PATH}'
-        var locale = null
         try {
-          locale = window.localStorage.getItem('drivecam.locale')
-        } catch (error) {
-          locale = null
-        }
-        if (locale !== 'en' && locale !== 'es') {
-          var lang = (navigator.language || 'en').toLowerCase()
-          locale = lang.indexOf('es') === 0 ? 'es' : 'en'
-        }
-        window.location.replace(base + locale + '/')
+          var locale = window.localStorage.getItem('drivecam.locale')
+          if (!locale) {
+            var lang = (navigator.language || '').toLowerCase()
+            if (lang.indexOf('es') === 0) {
+              window.location.replace('${BASE_PATH}es/')
+            }
+          } else if (locale === 'es') {
+            window.location.replace('${BASE_PATH}es/')
+          }
+        } catch (error) {}
       })()
-    </script>
-    <noscript><meta http-equiv="refresh" content="0;url=${BASE_PATH}en/" /></noscript>
-  </head>
-  <body></body>
-</html>
-`
-await write(distDir, 'index.html', redirect)
-console.log('wrote root redirect')
+    </script>`
 
-const entries = pages
+rootHtml = rootHtml.replace('<!--seo-head-->', renderSeoHead(rootSeo) + spanishDetectScript)
+await write(distDir, 'index.html', rootHtml)
+console.log('prerendered root /')
+
+const sitemapPages = [rootSeo, ...pages.filter((p) => p.path !== '/en')]
+const entries = sitemapPages
   .map((page) => {
     const alternates = page.alternates
       .map(
@@ -97,9 +92,12 @@ await write(distDir, 'robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_U
 await write(distDir, '.nojekyll', '')
 console.log('wrote sitemap.xml, robots.txt and .nojekyll')
 
-const missing = pages.filter((page) => !page.title || !page.description)
+const missing = [rootSeo, ...pages].filter((page) => !page.title || !page.description)
 if (missing.length > 0) {
   throw new Error(`Some pages are missing SEO metadata: ${missing.map((p) => p.path).join(', ')}`)
+}
+if (!getSeoForPath('/')) {
+  throw new Error('SEO lookup for / failed')
 }
 if (!getSeoForPath('/en/pricing')) {
   throw new Error('SEO lookup for /en/pricing failed')

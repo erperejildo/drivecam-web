@@ -6,6 +6,7 @@ export {
   SITE_URL,
   canonicalUrl,
   getJsonLd,
+  getRootSeo,
   getSeoForPath,
   getSeoPages,
   pagePath,
