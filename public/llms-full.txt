@@ -53,6 +53,7 @@ DriveCam actively samples device battery and CPU temperatures. If critical tempe
 - Homepage (Spanish): https://drivecam.store/es/
 - Feature Breakdown: https://drivecam.store/en/features/
 - User Setup & Mounting Guide: https://drivecam.store/en/guide/
-- Pricing: https://drivecam.store/en/pricing/
-- Privacy Policy & Terms: https://drivecam.store/en/legal/
+- Official Privacy Policy: https://axislabs.eu/drivecam/policy
+- Official Terms & Conditions: https://axislabs.eu/drivecam/terms-and-conditions
+- In-App Data & Permissions Summary: https://drivecam.store/en/legal/
 - XML Sitemap: https://drivecam.store/sitemap.xml
