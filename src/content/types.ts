@@ -1,6 +1,7 @@
 export type SiteLocale = 'en' | 'es'
 
-export type RouteKey = 'home' | 'features' | 'pricing' | 'guide' | 'legal' | 'notFound'
+export type RouteKey =
+  'home' | 'features' | 'pricing' | 'guide' | 'privacy' | 'terms' | 'legal' | 'notFound'
 
 export type IconName =
   | 'arrow'
@@ -125,7 +126,7 @@ export interface SiteContent {
     navTitle: string
     links: NavLink[]
     legalTitle: string
-    legalLinks: LinkItem[]
+    legalLinks: NavLink[]
     contactTitle: string
     contactBody: string
     stores: LinkItem[]

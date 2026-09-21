@@ -28,9 +28,9 @@ DriveCam is a lightweight mobile dash cam app designed to let drivers use an iPh
 
 - [Features Overview](https://drivecam.store/en/features/): Detailed specifications of all 12 recording, safety, and telemetry features.
 - [Setup & User Guide](https://drivecam.store/en/guide/): Windshield mounting techniques, recommended resolution settings, thermal mitigation, and local dashcam regulations.
-- [Privacy Policy](https://axislabs.eu/drivecam/policy): Official DriveCam privacy policy hosted on Axis Labs.
-- [Terms & Conditions](https://axislabs.eu/drivecam/terms-and-conditions): Official DriveCam terms and conditions hosted on Axis Labs.
-- [In-App Privacy & Data Summary](https://drivecam.store/en/legal/): On-site breakdown of local device permissions and offline data handling.
+- [Privacy Policy](https://drivecam.store/en/privacy/): Complete DriveCam privacy policy and offline data handling.
+- [Terms & Conditions](https://drivecam.store/en/terms/): DriveCam terms and conditions of use.
+- [In-App Privacy & Data Summary](https://drivecam.store/en/legal/): Combined breakdown of local device permissions, privacy, and terms.
 - [Spanish Edition](https://drivecam.store/es/): Full Spanish documentation and localized resources.
 
 ## App Store Listings

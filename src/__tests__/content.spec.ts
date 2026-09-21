@@ -54,7 +54,7 @@ describe('content parity', () => {
       const allLinks = [
         ...site.header.links.map((link) => ({ label: link.label, target: link.to })),
         ...site.footer.links.map((link) => ({ label: link.label, target: link.to })),
-        ...site.footer.legalLinks.map((link) => ({ label: link.label, target: link.href })),
+        ...site.footer.legalLinks.map((link) => ({ label: link.label, target: link.to })),
         ...site.footer.stores.map((store) => ({ label: store.label, target: store.href })),
       ]
       for (const link of allLinks) {
@@ -65,7 +65,16 @@ describe('content parity', () => {
   })
 
   it('provides meta for every route key in every locale', () => {
-    const routeKeys = ['home', 'features', 'pricing', 'guide', 'legal', 'notFound'] as const
+    const routeKeys = [
+      'home',
+      'features',
+      'pricing',
+      'guide',
+      'privacy',
+      'terms',
+      'legal',
+      'notFound',
+    ] as const
     for (const locale of locales) {
       const site: SiteContent = content[locale]
       for (const key of routeKeys) {

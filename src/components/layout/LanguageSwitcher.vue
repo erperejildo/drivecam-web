@@ -11,7 +11,15 @@ const { locale } = useLocale()
 
 const routeKey = computed<SeoRouteKey>(() => {
   const name = route.name
-  if (name === 'features' || name === 'pricing' || name === 'guide' || name === 'legal') return name
+  if (
+    name === 'features' ||
+    name === 'pricing' ||
+    name === 'guide' ||
+    name === 'privacy' ||
+    name === 'terms' ||
+    name === 'legal'
+  )
+    return name
   return 'home'
 })
 

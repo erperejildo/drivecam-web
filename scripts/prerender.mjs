@@ -90,7 +90,14 @@ ${entries}
 await write(distDir, 'sitemap.xml', sitemap)
 await write(distDir, 'robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`)
 await write(distDir, '.nojekyll', '')
-console.log('wrote sitemap.xml, robots.txt and .nojekyll')
+
+function redirectHtml(target) {
+  return `<!DOCTYPE html><html><head><meta charset="utf-8" /><meta http-equiv="refresh" content="0; url=${target}" /><link rel="canonical" href="${SITE_URL}${target}" /></head><body><a href="${target}">Redirecting...</a></body></html>`
+}
+await write(join(distDir, 'privacy'), 'index.html', redirectHtml('/en/privacy/'))
+await write(join(distDir, 'terms'), 'index.html', redirectHtml('/en/terms/'))
+await write(join(distDir, 'legal'), 'index.html', redirectHtml('/en/legal/'))
+console.log('wrote sitemap.xml, robots.txt, .nojekyll, and redirect stubs')
 
 const missing = [rootSeo, ...pages].filter((page) => !page.title || !page.description)
 if (missing.length > 0) {
