@@ -633,7 +633,7 @@ export const es: SiteContent = {
                 'DriveCam (Móvil)',
               ],
               rows: [
-                ['Precio Inicial', '259 €', '299 €', '379 €', '0 € Gratis / 18,99 € PRO'],
+                ['Precio Inicial', '259 €', '299 €', '379 €', '0 € Gratis / {price} PRO'],
                 [
                   'Instalación requerida',
                   'Cables y fusibles',
