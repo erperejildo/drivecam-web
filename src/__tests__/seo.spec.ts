@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   SITE_URL,
@@ -125,5 +127,16 @@ describe('structured data', () => {
     expect(head).toContain('hreflang="es"')
     expect(head).toContain('og:title')
     expect(head).toContain('og:image:width')
+  })
+})
+
+describe('consent mode signal in source', () => {
+  it('includes google consent mode v2 default signal in index.html source', () => {
+    const html = readFileSync(resolve(__dirname, '../../index.html'), 'utf8')
+    expect(html).toContain("gtag('consent', 'default'")
+    expect(html).toContain("ad_storage: 'denied'")
+    expect(html).toContain("ad_user_data: 'denied'")
+    expect(html).toContain("ad_personalization: 'denied'")
+    expect(html).toContain("analytics_storage: 'denied'")
   })
 })
