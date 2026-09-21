@@ -12,6 +12,8 @@ export function createAppRouter(history: RouterHistory) {
     history,
     routes: [
       { path: '/', name: 'root', component: HomeView },
+      { path: '/privacy', redirect: '/en/privacy' },
+      { path: '/terms', redirect: '/en/terms' },
       {
         path: '/:locale(en|es)',
         children: [
@@ -19,6 +21,8 @@ export function createAppRouter(history: RouterHistory) {
           { path: 'features', name: 'features', component: FeaturesView },
           { path: 'pricing', name: 'pricing', component: PricingView },
           { path: 'guide', name: 'guide', component: GuideView },
+          { path: 'privacy', name: 'privacy', component: LegalView },
+          { path: 'terms', name: 'terms', component: LegalView },
           { path: 'legal', name: 'legal', component: LegalView },
         ],
       },

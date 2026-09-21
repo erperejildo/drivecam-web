@@ -24,6 +24,16 @@ export const en: SiteContent = {
       description:
         'A practical guide to turning your phone into a dashcam: mounting, the best video settings, battery and heat management — and the rules to check before you record.',
     },
+    privacy: {
+      title: 'Privacy Policy — DriveCam',
+      description:
+        'How DriveCam handles your data: footage stays on your device, no account, no uploads. Read our full privacy policy.',
+    },
+    terms: {
+      title: 'Terms & Conditions — DriveCam',
+      description:
+        'Terms of use for DriveCam dash cam app. Licensing, safety notice, purchases and limitation of liability.',
+    },
     legal: {
       title: 'Privacy Policy & Terms — DriveCam',
       description:
@@ -60,8 +70,8 @@ export const en: SiteContent = {
     ],
     legalTitle: 'Legal',
     legalLinks: [
-      { label: 'Privacy policy', href: 'https://axislabs.eu/drivecam/policy' },
-      { label: 'Terms and conditions', href: 'https://axislabs.eu/drivecam/terms-and-conditions' },
+      { label: 'Privacy policy', to: '/privacy/' },
+      { label: 'Terms & conditions', to: '/terms/' },
     ],
     contactTitle: 'Support',
     contactBody:

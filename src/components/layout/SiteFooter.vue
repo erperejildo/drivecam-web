@@ -19,7 +19,7 @@ function localize(links: { label: string; to: string }[]) {
 }
 
 const navLinks = computed(() => localize(site.value.footer.links))
-const legalLinks = computed(() => site.value.footer.legalLinks)
+const legalLinks = computed(() => localize(site.value.footer.legalLinks))
 </script>
 
 <template>
@@ -59,16 +59,14 @@ const legalLinks = computed(() => site.value.footer.legalLinks)
 
         <nav class="site-footer__col" :aria-label="site.footer.legalTitle">
           <h3 class="site-footer__heading">{{ site.footer.legalTitle }}</h3>
-          <a
+          <RouterLink
             v-for="link in legalLinks"
             :key="link.label"
             class="site-footer__link"
-            :href="link.href"
-            target="_blank"
-            rel="noopener noreferrer"
+            :to="link.to"
           >
             {{ link.label }}
-          </a>
+          </RouterLink>
         </nav>
 
         <div class="site-footer__col">

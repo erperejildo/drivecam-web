@@ -24,6 +24,16 @@ export const es: SiteContent = {
       description:
         'Guía práctica para montar una dashcam en el coche con tu móvil: soporte, ajustes de vídeo, batería y calor — y la normativa local antes de grabar.',
     },
+    privacy: {
+      title: 'Política de Privacidad — DriveCam',
+      description:
+        'Cómo trata DriveCam tus datos: los vídeos se quedan en tu dispositivo, sin cuentas y sin subidas. Lee nuestra política de privacidad.',
+    },
+    terms: {
+      title: 'Términos y Condiciones — DriveCam',
+      description:
+        'Términos de uso de la app DriveCam. Licencia, aviso de seguridad, compras y limitación de responsabilidad.',
+    },
     legal: {
       title: 'Privacidad y Términos — DriveCam',
       description:
@@ -59,11 +69,8 @@ export const es: SiteContent = {
     ],
     legalTitle: 'Legal',
     legalLinks: [
-      { label: 'Política de privacidad', href: 'https://axislabs.eu/drivecam/policy' },
-      {
-        label: 'Términos y condiciones',
-        href: 'https://axislabs.eu/drivecam/terms-and-conditions',
-      },
+      { label: 'Política de privacidad', to: '/privacy/' },
+      { label: 'Términos y condiciones', to: '/terms/' },
     ],
     contactTitle: 'Soporte',
     contactBody: 'Errores, ideas o simplemente feedback: cada mensaje se lee y se responde.',

@@ -13,13 +13,17 @@ describe('seo pages', () => {
   const pages = getSeoPages()
 
   it('generates one page per locale and route', () => {
-    expect(pages).toHaveLength(10)
+    expect(pages).toHaveLength(14)
     const paths = pages.map((page) => page.path)
     expect(paths).toContain('/en')
     expect(paths).toContain('/en/features')
     expect(paths).toContain('/en/pricing')
+    expect(paths).toContain('/en/privacy')
+    expect(paths).toContain('/en/terms')
     expect(paths).toContain('/es')
     expect(paths).toContain('/es/guide')
+    expect(paths).toContain('/es/privacy')
+    expect(paths).toContain('/es/terms')
   })
 
   it('uses unique titles and descriptions', () => {
