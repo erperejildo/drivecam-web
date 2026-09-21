@@ -15,6 +15,7 @@ const routeKey = computed<SeoRouteKey>(() => {
     name === 'features' ||
     name === 'pricing' ||
     name === 'guide' ||
+    name === 'blog' ||
     name === 'privacy' ||
     name === 'terms' ||
     name === 'legal'
@@ -23,13 +24,21 @@ const routeKey = computed<SeoRouteKey>(() => {
   return 'home'
 })
 
-const options = computed(() =>
-  (['en', 'es'] as SiteLocale[]).map((code) => ({
+const options = computed(() => {
+  if (route.name === 'blog-post' && route.params.slug) {
+    const slug = String(route.params.slug)
+    return (['en', 'es'] as SiteLocale[]).map((code) => ({
+      code,
+      to: `/${code}/blog/${slug}/`,
+      current: code === locale.value,
+    }))
+  }
+  return (['en', 'es'] as SiteLocale[]).map((code) => ({
     code,
     to: pagePath(code, routeKey.value),
     current: code === locale.value,
-  })),
-)
+  }))
+})
 </script>
 
 <template>

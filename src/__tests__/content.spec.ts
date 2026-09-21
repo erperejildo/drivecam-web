@@ -70,6 +70,7 @@ describe('content parity', () => {
       'features',
       'pricing',
       'guide',
+      'blog',
       'privacy',
       'terms',
       'legal',
@@ -89,6 +90,22 @@ describe('content parity', () => {
     const primaryPlans = planSets[0] ?? []
     for (const plans of planSets.slice(1)) {
       expect(plans.map((plan) => plan.key)).toEqual(primaryPlans.map((plan) => plan.key))
+    }
+  })
+
+  it('keeps blog articles aligned across locales', () => {
+    const enArticles = content.en.blog.articles
+    expect(enArticles.length).toBeGreaterThan(0)
+    for (const locale of locales.slice(1)) {
+      const articles = content[locale].blog.articles
+      expect(articles.length).toBe(enArticles.length)
+      expect(articles.map((a) => a.slug)).toEqual(enArticles.map((a) => a.slug))
+      expect(articles.map((a) => a.date)).toEqual(enArticles.map((a) => a.date))
+      for (const article of articles) {
+        expect(article.title.length).toBeGreaterThan(0)
+        expect(article.description.length).toBeGreaterThan(0)
+        expect(article.sections.length).toBeGreaterThan(0)
+      }
     }
   })
 })

@@ -13,15 +13,19 @@ describe('seo pages', () => {
   const pages = getSeoPages()
 
   it('generates one page per locale and route', () => {
-    expect(pages).toHaveLength(14)
+    expect(pages).toHaveLength(22)
     const paths = pages.map((page) => page.path)
     expect(paths).toContain('/en')
     expect(paths).toContain('/en/features')
     expect(paths).toContain('/en/pricing')
+    expect(paths).toContain('/en/blog')
+    expect(paths).toContain('/en/blog/dashcam-accident-court-evidence')
     expect(paths).toContain('/en/privacy')
     expect(paths).toContain('/en/terms')
     expect(paths).toContain('/es')
     expect(paths).toContain('/es/guide')
+    expect(paths).toContain('/es/blog')
+    expect(paths).toContain('/es/blog/best-dashcams-comparison-save-money')
     expect(paths).toContain('/es/privacy')
     expect(paths).toContain('/es/terms')
   })
@@ -98,6 +102,19 @@ describe('structured data', () => {
     const jsonLd = JSON.stringify(getJsonLd('/es/pricing'))
     expect(jsonLd).toContain('FAQPage')
     expect(jsonLd).toContain('BreadcrumbList')
+  })
+
+  it('adds Blog and BreadcrumbList on the blog hub page', () => {
+    const jsonLd = JSON.stringify(getJsonLd('/en/blog'))
+    expect(jsonLd).toContain('Blog')
+    expect(jsonLd).toContain('BreadcrumbList')
+  })
+
+  it('adds BlogPosting, BreadcrumbList, and FAQPage on single article page', () => {
+    const jsonLd = JSON.stringify(getJsonLd('/en/blog/dashcam-accident-court-evidence'))
+    expect(jsonLd).toContain('BlogPosting')
+    expect(jsonLd).toContain('BreadcrumbList')
+    expect(jsonLd).toContain('FAQPage')
   })
 
   it('escapes closing script tags in rendered head tags', () => {

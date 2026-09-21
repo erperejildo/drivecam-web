@@ -94,6 +94,7 @@ await write(distDir, '.nojekyll', '')
 function redirectHtml(target) {
   return `<!DOCTYPE html><html><head><meta charset="utf-8" /><meta http-equiv="refresh" content="0; url=${target}" /><link rel="canonical" href="${SITE_URL}${target}" /></head><body><a href="${target}">Redirecting...</a></body></html>`
 }
+await write(join(distDir, 'blog'), 'index.html', redirectHtml('/en/blog/'))
 await write(join(distDir, 'privacy'), 'index.html', redirectHtml('/en/privacy/'))
 await write(join(distDir, 'terms'), 'index.html', redirectHtml('/en/terms/'))
 await write(join(distDir, 'legal'), 'index.html', redirectHtml('/en/legal/'))
@@ -108,4 +109,7 @@ if (!getSeoForPath('/')) {
 }
 if (!getSeoForPath('/en/pricing')) {
   throw new Error('SEO lookup for /en/pricing failed')
+}
+if (!getSeoForPath('/en/blog')) {
+  throw new Error('SEO lookup for /en/blog failed')
 }
