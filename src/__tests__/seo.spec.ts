@@ -41,7 +41,8 @@ describe('seo pages', () => {
 
   it('builds canonical urls on the site url', () => {
     for (const page of pages) {
-      expect(page.canonical).toBe(canonicalUrl(page.path))
+      const expectedCanonical = page.path === '/en' ? canonicalUrl('') : canonicalUrl(page.path)
+      expect(page.canonical).toBe(expectedCanonical)
       expect(page.canonical.startsWith(SITE_URL)).toBe(true)
       expect(page.canonical.endsWith('/')).toBe(true)
     }
@@ -63,11 +64,30 @@ describe('seo pages', () => {
   })
 })
 
+describe('root seo', () => {
+  it('provides self-referencing canonical on root', () => {
+    const root = getSeoForPath('/')
+    expect(root).toBeDefined()
+    expect(root?.canonical).toBe(`${SITE_URL}/`)
+    expect(root?.locale).toBe('en')
+    expect(root?.title).toBeTruthy()
+    expect(root?.description).toBeTruthy()
+  })
+})
+
 describe('structured data', () => {
-  it('adds SoftwareApplication and FAQPage on the home page', () => {
-    const jsonLd = JSON.stringify(getJsonLd('/en'))
+  it('adds Organization, WebSite, SoftwareApplication and FAQPage on the home page', () => {
+    const jsonLd = JSON.stringify(getJsonLd('/'))
+    expect(jsonLd).toContain('Organization')
+    expect(jsonLd).toContain('WebSite')
     expect(jsonLd).toContain('SoftwareApplication')
     expect(jsonLd).toContain('FAQPage')
+  })
+
+  it('adds HowTo and BreadcrumbList on the guide page', () => {
+    const jsonLd = JSON.stringify(getJsonLd('/en/guide'))
+    expect(jsonLd).toContain('HowTo')
+    expect(jsonLd).toContain('BreadcrumbList')
   })
 
   it('adds FAQPage on the pricing page', () => {
@@ -83,5 +103,6 @@ describe('structured data', () => {
     expect(head).toContain('rel="canonical"')
     expect(head).toContain('hreflang="es"')
     expect(head).toContain('og:title')
+    expect(head).toContain('og:image:width')
   })
 })

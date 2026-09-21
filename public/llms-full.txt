@@ -1,0 +1,58 @@
+# DriveCam — Full Documentation & AI Reference
+
+DriveCam is an offline-first, privacy-focused car camera and dashcam application developed for smartphones running iOS and Android by Axis Labs.
+
+## Executive Overview
+
+DriveCam allows drivers to avoid purchasing expensive standalone dashcam hardware, dealing with messy cabin wiring, or worrying about proprietary SD card corruptions. By repurposing either a daily-use phone or a spare phone kept mounted in a car holder, users gain a full automotive drive recorder equipped with telemetry, voice control, and crash evidence logging.
+
+- Canonical Site: https://drivecam.store/
+- Contact: drodriguez.apps@gmail.com
+- Organization: Axis Labs (https://axislabs.eu)
+- License & Distribution: Proprietary freemium with single-tier Lifetime In-App Purchase via Google Play and Apple App Store.
+
+## Technical Specifications & Architecture
+
+### Video & Recording Pipeline
+- Segment Durations: 1-minute, 2-minute, or 3-minute video segments.
+- Loop Cycling: Automatically overwrites oldest unflagged clips when configured storage budget is reached.
+- Telemetry Overlay: Sub-second GPS timestamps, real-time vehicle speed (km/h or mph), coordinate coordinates burned directly into the encoded video container.
+- Camera Flexibility: Selectable rear (wide/ultra-wide) or front-facing cameras depending on mounting setup and cabin orientation.
+- Night Mode: Automatic low-light compensation and sensor exposure boost activated by ambient light readings or voice prompt.
+- Screen Off & Background Recording: Background execution via foreground services on Android and background audio management on iOS, reducing OLED battery draw and temperature build-up.
+
+### Privacy & Data Security
+- 100% Offline Core: Does not require cellular connection, external API authentication, or user accounts.
+- Local Sandboxed Storage: Video footage is stored in private application directories, inaccessible to third-party gallery apps or automated cloud backup photo vaults.
+- No Tracking: The marketing website and application client contain zero third-party analytics pixels, tracking cookies, or external surveillance libraries.
+
+### Incident Report System
+- Post-Collision Export: Generates a signed PDF containing video thumbnails, mapped route coordinates, speed metrics at impact time, and driver notes.
+- Format: Standard PDF suitable for insurance claim submission and police accident reports.
+
+## Pricing & Monetization
+
+- **Free Tier ($0)**: Continuous loop recording, GPS telemetry overlay, offline voice commands, emergency incident PDF generator, and private gallery playback.
+- **PRO Lifetime ($24.99 / 18,99 €)**: One-time payment (no subscription). Unlocks maximum resolution bitrates, unmetered storage quotas, RTSP live streaming output to personal servers, and driving history statistics.
+- **Rewarded Ad Trial**: Free-tier users can optionally unlock a full 7-day PRO trial by viewing 3 short rewarded video advertisements.
+
+## Frequently Asked Questions (FAQ)
+
+### How is DriveCam different from dedicated hardware dashcams?
+DriveCam requires no specialized wiring, expensive hardware modules, or separate SD cards. It utilizes modern smartphone camera sensors, which often outperform budget dashcam sensors in dynamic range and low-light scenarios.
+
+### Does DriveCam record when the screen is turned off?
+Yes. On Android, DriveCam leverages persistent foreground services to keep filming while the display is powered off. On iOS, background recording keeps filming while saving power.
+
+### Will continuous dashcam recording overheat my phone?
+DriveCam actively samples device battery and CPU temperatures. If critical temperature thresholds are approached during hot summer drives, the app safely finalizes the current clip, issues an acoustic warning, and enters a cooling cooldown state to prevent device degradation.
+
+## Complete URLs
+
+- Homepage (English / Default): https://drivecam.store/
+- Homepage (Spanish): https://drivecam.store/es/
+- Feature Breakdown: https://drivecam.store/en/features/
+- User Setup & Mounting Guide: https://drivecam.store/en/guide/
+- Pricing: https://drivecam.store/en/pricing/
+- Privacy Policy & Terms: https://drivecam.store/en/legal/
+- XML Sitemap: https://drivecam.store/sitemap.xml

@@ -11,7 +11,7 @@ export function createAppRouter(history: RouterHistory) {
   return createRouter({
     history,
     routes: [
-      { path: '/', redirect: '/en' },
+      { path: '/', name: 'root', component: HomeView },
       {
         path: '/:locale(en|es)',
         children: [

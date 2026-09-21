@@ -1,0 +1,38 @@
+# DriveCam
+
+> DriveCam turns your smartphone into a private, offline-first dash cam and car camera recorder for iOS and Android.
+
+DriveCam is a lightweight mobile dash cam app designed to let drivers use an iPhone or Android phone — including dedicated older phones — as a full-featured windshield camera. It records in automatic loop segments, stamps GPS coordinates, speed, and time into video files, operates completely offline without internet or server dependencies, keeps footage inside private sandboxed storage, and includes thermal and battery monitoring protections.
+
+- Website: https://drivecam.store/
+- Developer: Axis Labs (https://axislabs.eu)
+- Contact: drodriguez.apps@gmail.com
+- Supported Platforms: iOS, Android
+
+## Core Capabilities
+
+- **Automatic Loop Recording**: Seamlessly cycles 1, 2, or 3-minute video segments, automatically replacing the oldest clips when designated storage limits are reached.
+- **GPS, Speed & Timestamp Overlay**: Burns unarguable evidence (coordinates, real-time speed, date, and time) directly onto the video frames.
+- **Offline Voice Commands**: Completely offline voice recognition allowing hands-free actions: start/stop recording, lock clips, capture snapshots, or toggle night mode while driving.
+- **Privacy-First Sandboxed Storage**: All recordings and telemetry remain strictly on the local device. No telemetry tracking, no cloud uploads, and no exposure to public device photo libraries.
+- **Incident Report Generation**: Rapidly exports a comprehensive PDF document after collisions or traffic incidents containing map positions, GPS coordinates, maximum recorded speeds, and accident snapshot frames ready for insurance providers or police.
+- **Thermal & Battery Safeguards**: Active temperature monitoring with automated cooling pauses to protect device hardware in hot windshield environments, paired with low-battery auto-stop limits.
+- **Background & PiP Recording**: Maintains continuous recording with the screen locked or dimmed, and supports picture-in-picture mode on Android.
+
+## Pricing Structure
+
+- **Free Tier**: Free forever. Full access to loop recording, GPS data stamping, offline voice commands, night mode, private storage, and incident PDF exports. Optional 7-day PRO trial unlockable via 3 short rewarded videos.
+- **PRO Lifetime**: One-time purchase ($24.99 / 18,99 €) for permanent access across all current and future updates. Unlocks maximum video bitrates, granular loop duration and storage settings, live RTSP/custom server streaming, and detailed driving analytics. No recurring subscriptions.
+
+## Key Pages & Documentation
+
+- [Features Overview](https://drivecam.store/en/features/): Detailed specifications of all 12 recording, safety, and telemetry features.
+- [Setup & User Guide](https://drivecam.store/en/guide/): Windshield mounting techniques, recommended resolution settings, thermal mitigation, and local dashcam regulations.
+- [Pricing Guide](https://drivecam.store/en/pricing/): Transparent Free vs. PRO comparison with one-time payment details.
+- [Privacy Policy & Terms](https://drivecam.store/en/legal/): Full privacy disclosure, local device storage policies, permissions explanation, and consumer rights.
+- [Spanish Edition](https://drivecam.store/es/): Full Spanish documentation and localized resources.
+
+## App Store Listings
+
+- Google Play: https://play.google.com/store/apps/details?id=com.drodriguez.drivecam
+- Apple App Store: https://apps.apple.com/app/id6791342778
