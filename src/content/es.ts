@@ -59,8 +59,11 @@ export const es: SiteContent = {
     ],
     legalTitle: 'Legal',
     legalLinks: [
-      { label: 'Política de privacidad', to: '/legal/' },
-      { label: 'Términos de uso', to: '/legal/#terms' },
+      { label: 'Política de privacidad', href: 'https://axislabs.eu/drivecam/policy' },
+      {
+        label: 'Términos y condiciones',
+        href: 'https://axislabs.eu/drivecam/terms-and-conditions',
+      },
     ],
     contactTitle: 'Soporte',
     contactBody: 'Errores, ideas o simplemente feedback: cada mensaje se lee y se responde.',

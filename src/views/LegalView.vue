@@ -17,6 +17,39 @@ const { site } = useLocale()
 
     <section class="section legal-body">
       <div class="shell legal-body__shell">
+        <div class="legal-links-callout" v-reveal>
+          <span>{{
+            site.locale === 'es'
+              ? 'Documentos oficiales de Axis Labs:'
+              : 'Official Axis Labs documentation:'
+          }}</span>
+          <a
+            href="https://axislabs.eu/drivecam/policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="legal-external-link"
+          >
+            {{
+              site.locale === 'es'
+                ? 'Política de Privacidad oficial ↗'
+                : 'Official Privacy Policy ↗'
+            }}
+          </a>
+          <span class="legal-separator">·</span>
+          <a
+            href="https://axislabs.eu/drivecam/terms-and-conditions"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="legal-external-link"
+          >
+            {{
+              site.locale === 'es'
+                ? 'Términos y Condiciones oficiales ↗'
+                : 'Official Terms & Conditions ↗'
+            }}
+          </a>
+        </div>
+
         <article class="legal-doc">
           <h2 class="legal-doc__title">{{ site.legal.privacyTitle }}</h2>
           <section
@@ -118,6 +151,34 @@ const { site } = useLocale()
   margin-bottom: var(--space-m);
   border-bottom: 1px solid var(--color-border-strong);
   font-size: var(--text-h2);
+}
+
+.legal-links-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-s) var(--space-m);
+  margin-bottom: var(--space-xl);
+  border-radius: var(--radius-s);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  font-size: var(--text-small);
+  color: var(--color-ink-muted);
+}
+
+.legal-external-link {
+  color: var(--color-accent-strong);
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.legal-separator {
+  color: var(--color-border-strong);
 }
 
 .legal-block {

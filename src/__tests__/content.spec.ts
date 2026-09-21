@@ -52,14 +52,14 @@ describe('content parity', () => {
     for (const locale of locales) {
       const site = content[locale]
       const allLinks = [
-        ...site.header.links,
-        ...site.footer.links,
-        ...site.footer.legalLinks,
-        ...site.footer.stores.map((store) => ({ label: store.label, to: store.href })),
+        ...site.header.links.map((link) => ({ label: link.label, target: link.to })),
+        ...site.footer.links.map((link) => ({ label: link.label, target: link.to })),
+        ...site.footer.legalLinks.map((link) => ({ label: link.label, target: link.href })),
+        ...site.footer.stores.map((store) => ({ label: store.label, target: store.href })),
       ]
       for (const link of allLinks) {
         expect(link.label.length).toBeGreaterThan(0)
-        expect(link.to.length).toBeGreaterThan(0)
+        expect(link.target.length).toBeGreaterThan(0)
       }
     }
   })

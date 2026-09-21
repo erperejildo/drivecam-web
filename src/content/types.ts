@@ -125,7 +125,7 @@ export interface SiteContent {
     navTitle: string
     links: NavLink[]
     legalTitle: string
-    legalLinks: NavLink[]
+    legalLinks: LinkItem[]
     contactTitle: string
     contactBody: string
     stores: LinkItem[]

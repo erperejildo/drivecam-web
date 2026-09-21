@@ -60,8 +60,8 @@ export const en: SiteContent = {
     ],
     legalTitle: 'Legal',
     legalLinks: [
-      { label: 'Privacy policy', to: '/legal/' },
-      { label: 'Terms of use', to: '/legal/#terms' },
+      { label: 'Privacy policy', href: 'https://axislabs.eu/drivecam/policy' },
+      { label: 'Terms and conditions', href: 'https://axislabs.eu/drivecam/terms-and-conditions' },
     ],
     contactTitle: 'Support',
     contactBody:
