@@ -1,6 +1,6 @@
 import type { SiteLocale } from '@/content/types'
 
-export const CONTACT_EMAIL = 'drodriguez.apps@gmail.com'
+export const CONTACT_EMAIL = 'info@drivecam.store'
 
 export const STORE_LINKS = {
   android: 'https://play.google.com/store/apps/details?id=com.drodriguez.drivecam',

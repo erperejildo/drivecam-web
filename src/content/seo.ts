@@ -128,7 +128,7 @@ function organization(): Record<string, unknown> {
     logo: `${SITE_URL}/img/app-icon.png`,
     description:
       'DriveCam turns your smartphone into an offline, privacy-first dash cam and car camera recorder.',
-    email: 'drodriguez.apps@gmail.com',
+    email: 'info@drivecam.store',
     parentOrganization: {
       '@type': 'Organization',
       name: 'Axis Labs',
@@ -137,7 +137,7 @@ function organization(): Record<string, unknown> {
     sameAs: ['https://github.com/erperejildo/drivecam-web', 'https://axislabs.eu'],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'drodriguez.apps@gmail.com',
+      email: 'info@drivecam.store',
       contactType: 'customer support',
     },
   }

@@ -330,7 +330,7 @@ export const en: SiteContent = {
     hint: 'This form opens your email app — nothing is sent to any server and nothing is stored on this website.',
     successTitle: 'Your email app should have opened',
     successBody:
-      'If nothing happened, write to drodriguez.apps@gmail.com directly. I usually reply within 1–2 days.',
+      'If nothing happened, write to info@drivecam.store directly. I usually reply within 1–2 days.',
   },
   pricing: {
     eyebrow: 'Pricing',
@@ -501,7 +501,7 @@ export const en: SiteContent = {
         title: '1. Who we are',
         paragraphs: [
           'DriveCam is a mobile application developed by Axis Labs ("we", "us"). This policy explains what the app does with your information. The short version: your footage and your location stay on your device.',
-          'For any privacy question, contact drodriguez.apps@gmail.com.',
+          'For any privacy question, contact info@drivecam.store.',
         ],
       },
       {
@@ -588,7 +588,7 @@ export const en: SiteContent = {
       },
     ],
     contactNote:
-      'Questions about these terms or how DriveCam handles data? Write to drodriguez.apps@gmail.com and you will get an answer from the person who built the app.',
+      'Questions about these terms or how DriveCam handles data? Write to info@drivecam.store and you will get an answer from the person who built the app.',
   },
   notFound: {
     title: 'This road leads nowhere.',

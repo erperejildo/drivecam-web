@@ -19,7 +19,7 @@ Live URL (expected): https://erperejildo.github.io/drivecam-web/ (project page �
 | Real assets          | `testing-screens/01_launch.png` (app screenshot), `assets/images/onboarding_placing_phone.png` (phone-in-car illustration), Android launcher icon (`mipmap-xxxhdpi/ic_launcher.png`), FiraCode font. |
 | Store links          | Android `com.drodriguez.drivecam` · iOS `id6791342778`                                                                                                                                               |
 | Copy source          | `drivecam/keywords.md` — full EN/ES store descriptions; reuse wording for consistency.                                                                                                               |
-| Contact email        | `drodriguez.apps@gmail.com`                                                                                                                                                                          |
+| Contact email        | `info@drivecam.store`                                                                                                                                                                                |
 
 ---
 

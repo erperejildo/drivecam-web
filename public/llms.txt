@@ -6,7 +6,7 @@ DriveCam is a lightweight mobile dash cam app designed to let drivers use an iPh
 
 - Website: https://drivecam.store/
 - Developer: Axis Labs (https://axislabs.eu)
-- Contact: drodriguez.apps@gmail.com
+- Contact: info@drivecam.store
 - Supported Platforms: iOS, Android
 
 ## Core Capabilities

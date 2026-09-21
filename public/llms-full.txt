@@ -7,7 +7,7 @@ DriveCam is an offline-first, privacy-focused car camera and dashcam application
 DriveCam allows drivers to avoid purchasing expensive standalone dashcam hardware, dealing with messy cabin wiring, or worrying about proprietary SD card corruptions. By repurposing either a daily-use phone or a spare phone kept mounted in a car holder, users gain a full automotive drive recorder equipped with telemetry, voice control, and crash evidence logging.
 
 - Canonical Site: https://drivecam.store/
-- Contact: drodriguez.apps@gmail.com
+- Contact: info@drivecam.store
 - Organization: Axis Labs (https://axislabs.eu)
 - License & Distribution: Proprietary freemium with single-tier Lifetime In-App Purchase via Google Play and Apple App Store.
 
