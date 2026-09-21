@@ -5,9 +5,15 @@ import AccordionItem from '@/components/shared/AccordionItem.vue'
 import IconGlyph from '@/components/shared/IconGlyph.vue'
 import StoreButton from '@/components/shared/StoreButton.vue'
 import { useLocale } from '@/composables/useLocale'
+import { useLifetimePrice } from '@/composables/useLifetimePrice'
 
 const route = useRoute()
 const { locale, site } = useLocale()
+const { price: lifetimePrice } = useLifetimePrice()
+
+function renderCell(cell: string) {
+  return cell.replace('{price}', lifetimePrice.value)
+}
 
 const slug = computed(() => String(route.params.slug || ''))
 
@@ -109,7 +115,7 @@ const otherArticles = computed(() => {
                         class="article-table__td"
                         :class="{ 'article-table__td--highlight': cIdx === row.length - 1 }"
                       >
-                        {{ cell }}
+                        {{ renderCell(cell) }}
                       </td>
                     </tr>
                   </tbody>

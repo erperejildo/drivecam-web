@@ -635,7 +635,7 @@ export const en: SiteContent = {
                 'DriveCam (Phone)',
               ],
               rows: [
-                ['Initial Cost', '$259.99', '$299.99', '$379.99', '$0 Free / $24.99 PRO'],
+                ['Initial Cost', '$259.99', '$299.99', '$379.99', '$0 Free / {price} PRO'],
                 [
                   'Installation Required',
                   'Fuse tap / Wires',
