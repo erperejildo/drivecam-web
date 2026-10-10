@@ -98,7 +98,15 @@ await write(join(distDir, 'blog'), 'index.html', redirectHtml('/en/blog/'))
 await write(join(distDir, 'privacy'), 'index.html', redirectHtml('/en/privacy/'))
 await write(join(distDir, 'terms'), 'index.html', redirectHtml('/en/terms/'))
 await write(join(distDir, 'legal'), 'index.html', redirectHtml('/en/legal/'))
-console.log('wrote sitemap.xml, robots.txt, .nojekyll, and redirect stubs')
+try {
+  const appAds = await readFile(join(rootDir, 'app-ads.txt'), 'utf8')
+  await write(distDir, 'app-ads.txt', appAds)
+  await write(join(rootDir, 'public'), 'app-ads.txt', appAds)
+  console.log('wrote app-ads.txt')
+} catch (error) {
+  console.warn('Could not sync app-ads.txt:', error)
+}
+console.log('wrote sitemap.xml, robots.txt, .nojekyll, redirect stubs, and app-ads.txt')
 
 const missing = [rootSeo, ...pages].filter((page) => !page.title || !page.description)
 if (missing.length > 0) {

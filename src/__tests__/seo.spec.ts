@@ -140,3 +140,12 @@ describe('consent mode signal in source', () => {
     expect(html).toContain("analytics_storage: 'denied'")
   })
 })
+
+describe('app-ads.txt', () => {
+  it('serves valid publisher records from public directory matching root app-ads.txt', () => {
+    const rootContent = readFileSync(resolve(__dirname, '../../app-ads.txt'), 'utf8')
+    const publicContent = readFileSync(resolve(__dirname, '../../public/app-ads.txt'), 'utf8')
+    expect(rootContent).toContain('google.com, pub-2945024608555072, DIRECT, f08c47fec0942fa0')
+    expect(publicContent).toBe(rootContent)
+  })
+})

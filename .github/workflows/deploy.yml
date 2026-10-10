@@ -67,6 +67,7 @@ jobs:
           test -f dist/.nojekyll
           test -f dist/sitemap.xml
           test -f dist/robots.txt
+          test -f dist/app-ads.txt
           test -f dist/en/index.html
           test -f dist/es/index.html
           test -f dist/en/features/index.html
@@ -145,7 +146,7 @@ jobs:
           set -e
           sleep 15
           base="http://drivecam.store"
-          for path in "" "en/" "es/" "en/features/" "en/pricing/" "es/guide/" "sitemap.xml"; do
+          for path in "" "en/" "es/" "en/features/" "en/pricing/" "es/guide/" "sitemap.xml" "app-ads.txt"; do
             code=$(curl -sL -o /dev/null -w "%{http_code}" --retry 5 --retry-all-errors --retry-delay 5 "$base/$path")
             echo "$base/$path -> $code"
             if [ "$code" != "200" ]; then
